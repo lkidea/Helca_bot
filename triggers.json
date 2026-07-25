@@ -1,0 +1,26 @@
+[
+  {
+    "trigger_type": "S",
+    "trigger": "ahoj bote",
+    "response_type": "R",
+    "response": "Ahoj! Vnímám tě."
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "dobré ráno",
+    "response_type": "M",
+    "response": "Přeji všem pěkné ráno! ☀️"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "pes",
+    "response_type": "R",
+    "response": "Haf! Někdo tady mluvil o psovi?"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "pivo",
+    "response_type": "M",
+    "response": "Na zdraví! 🍺"
+  }
+]
