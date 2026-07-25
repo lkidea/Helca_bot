@@ -18,9 +18,7 @@ if ALLOWED_CHANNELS_RAW.strip():
         clean_id = channel_id.strip()
         if clean_id.isdigit():
             ALLOWED_CHANNEL_IDS.add(int(clean_id))
-
-# Pre-load Czech language data for Simplemma in RAM
-LANG_DATA = simplemma.load_data("cs")
+            
 
 # Load Triggers from triggers.json
 TRIGGERS_FILE = "triggers.json"
@@ -76,7 +74,7 @@ async def on_message(message: discord.Message):
     if L_TRIGGERS:
         tokens = simplemma.simple_tokenizer(message.content)
         extracted_lemmas = {
-            simplemma.lemmatize(token, LANG_DATA).lower() for token in tokens
+            simplemma.lemmatize(token, lang="cs").lower() for token in tokens
         }
 
         for rule in L_TRIGGERS:
