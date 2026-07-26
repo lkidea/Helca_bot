@@ -10,5 +10,17 @@
     "trigger": "a o čem",
     "response_type": "R",
     "response": "O čemkoliv 🤗 Jestli tě třeba něco trápí, můžeš se zkusit o to podělit 🤗"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "laskavému tučňákovi",
+    "response_type": "R",
+    "response": "cfhhfff"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "píču",
+    "response_type": "M",
+    "response": "grfff"
   }
 ]
