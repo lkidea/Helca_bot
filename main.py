@@ -70,19 +70,30 @@ async def on_message(message: discord.Message):
         if target_str in content_lower:
             await execute_response(message, rule)
             return
-
+            
+                
     # Step B: If no 'S' trigger hit, process 'L' (Lemmatized) Triggers
     if L_TRIGGERS:
+        # 1. Tokenize the user's message
         tokens = simplemma.simple_tokenizer(message.content)
-        extracted_lemmas = {
-            simplemma.lemmatize(token, lang="cs").lower() for token in tokens
-        }
+        
+        # 2. Lemmatize each word but KEEP the original sentence order
+        message_lemmas = [simplemma.lemmatize(token, lang="cs").lower() for token in tokens]
+        
+        # 3. Join them back into a single flat string (e.g., "vidět ten červený pes")
+        lemmatized_message_string = " ".join(message_lemmas)
 
         for rule in L_TRIGGERS:
-            target_lemma = rule["trigger"].lower()
-            if target_lemma in extracted_lemmas:
+            # 4. Lemmatize the trigger phrase itself, just in case you typed it in a weird grammatical case in triggers.json
+            trigger_tokens = simplemma.simple_tokenizer(rule["trigger"])
+            trigger_lemmas = [simplemma.lemmatize(t, lang="cs").lower() for t in trigger_tokens]
+            lemmatized_trigger_string = " ".join(trigger_lemmas)
+
+            # 5. Check if the flat trigger phrase exists inside the flat user message
+            if lemmatized_trigger_string in lemmatized_message_string:
                 await execute_response(message, rule)
                 return
+                
 
 
 async def execute_response(message: discord.Message, rule: dict):
