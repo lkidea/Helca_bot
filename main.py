@@ -79,21 +79,31 @@ async def on_message(message: discord.Message):
         
         # 2. Lemmatize each word but KEEP the original sentence order
         message_lemmas = [simplemma.lemmatize(token, lang="cs").lower() for token in tokens]
-        
-        # 3. Join them back into a single flat string (e.g., "vidět ten červený pes")
-        lemmatized_message_string = " ".join(message_lemmas)
+
+        # 3. (Removed) We no longer join the lemmas into a flat string to preserve word boundaries.
 
         for rule in L_TRIGGERS:
-            # 4. Lemmatize the trigger phrase itself, just in case you typed it in a weird grammatical case in triggers.json
+            # 4. Lemmatize the trigger phrase itself
             trigger_tokens = simplemma.simple_tokenizer(rule["trigger"])
             trigger_lemmas = [simplemma.lemmatize(t, lang="cs").lower() for t in trigger_tokens]
-            lemmatized_trigger_string = " ".join(trigger_lemmas)
-
-            # 5. Check if the flat trigger phrase exists inside the flat user message
-            if lemmatized_trigger_string in lemmatized_message_string:
+            
+            # 5. Check if the sequence of trigger lemmas exists in the message lemmas
+            trigger_len = len(trigger_lemmas)
+            msg_len = len(message_lemmas)
+            
+            match_found = False
+            
+            # Ensure the trigger is not empty and isn't longer than the message itself
+            if trigger_len > 0 and trigger_len <= msg_len:
+                # Slide a "window" over the message lemmas to check for exact sequence matches
+                for i in range(msg_len - trigger_len + 1):
+                    if message_lemmas[i:i+trigger_len] == trigger_lemmas:
+                        match_found = True
+                        break
+                        
+            if match_found:
                 await execute_response(message, rule)
                 return
-                
 
 
 async def execute_response(message: discord.Message, rule: dict):
