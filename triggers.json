@@ -22,5 +22,53 @@
     "trigger": "adu",
     "response_type": "M",
     "response": "https://tenor.com/view/kv%C4%9Btinky-pro-ad%C3%A9lku-gif-9241101598964541795"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "ahoj",
+    "response_type": "R",
+    "response": "čusík <:meow:1224269231751827506>"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "ahojky",
+    "response_type": "R",
+    "response": "ahojkyy 🌼🌼🤗🌼🌼"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "ai",
+    "response_type": "M",
+    "response": "😢 no tak si za ní běž když ti nejsem dost dobrá 🤦"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "angst",
+    "response_type": "M",
+    "response": "🤗 Angst is such a nice guy 🤗🤗🤗🤗"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "bone",
+    "response_type": "R",
+    "response": "-# ||Juvaaa Bone <:Bone:1047218066351726663> <:bonebon:1084579253854666772> <:boneslash:1047224660581949531> <:oh_la_la_Bone:1207319365666603109> <:trippin_Bone:1080627886907732123>||"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "busík",
+    "response_type": "M",
+    "response": "https://tenor.com/view/bus-thunderbolt-classic-jackie-chan-90s-gif-13155789326514047649"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "by jsme",
+    "response_type": "M",
+    "response": "https://tenor.com/view/grammar-police-drift-police-car-gif-17312786"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "zeď",
+    "response_type": "R",
+    "response": "Uuuuu, zeď! Mohla bych tam žít?? <:meow:1224269231751827506>"
   }
 ]
