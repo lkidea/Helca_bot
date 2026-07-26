@@ -5,6 +5,7 @@ import asyncio
 import discord
 from aiohttp import web
 import simplemma
+import random
 
 # ---------------------------------------------------------
 # 1. Environment & Configuration Setup
@@ -85,13 +86,23 @@ async def on_message(message: discord.Message):
 
 
 async def execute_response(message: discord.Message, rule: dict):
-    text = rule["response"]
+    response_data = rule["response"]
+    
+    # Check if the response is a list of multiple options
+    if isinstance(response_data, list):
+        # Pick one random response from the list
+        text = random.choice(response_data)
+    else:
+        # Fallback for older triggers that only have a single string
+        text = response_data
+
     resp_type = rule.get("response_type", "M").upper()
 
     if resp_type == "R":
         await message.reply(text)
     else:
         await message.channel.send(text)
+        
 
 
 # ---------------------------------------------------------
