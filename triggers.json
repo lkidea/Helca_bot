@@ -77,6 +77,12 @@
     ]
   },
   {
+    "trigger_type": "S",
+    "trigger": "Čerok mně znásilnil",
+    "response_type": "R",
+    "response": "Za to, jak neumíš mluvnici, si to jen zasloužíš!"
+  },
+  {
     "trigger_type": "L",
     "trigger": "zeď",
     "response_type": "R",
