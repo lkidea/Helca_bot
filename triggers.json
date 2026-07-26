@@ -67,6 +67,16 @@
     "response": "https://tenor.com/view/grammar-police-drift-police-car-gif-17312786"
   },
   {
+    "trigger_type": "S",
+    "trigger": "Čerok mě znásilnil",
+    "response_type": "R",
+    "response": [
+      "A poděkoval jsi? <:pausechamp_Cerok:1209145557587861525>",
+      "Já znásilním tebe, jestli mě budeš pořád rušit!",
+      "se někdo má 😒"
+    ]
+  },
+  {
     "trigger_type": "L",
     "trigger": "zeď",
     "response_type": "R",
