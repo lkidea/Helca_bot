@@ -107,6 +107,17 @@ async def on_message(message: discord.Message):
 
 
 async def execute_response(message: discord.Message, rule: dict):
+    # Fetch "quantity" from the rule. If it's missing, default to 1. 
+    # max(1, ...) ensures the bot won't crash if you accidentally type a 0 or negative number in the JSON.
+    quantity = max(1, int(rule.get("quantity", 1)))
+    
+    # If quantity is greater than 1, roll a metaphorical die.
+    # random.randint(1, quantity) picks a random number between 1 and the quantity.
+    # If the result is NOT 1, we exit the function immediately without replying.
+    if quantity > 1 and random.randint(1, quantity) != 1:
+        return
+    
+    
     response_data = rule["response"]
     
     # Check if the response is a list of multiple options
