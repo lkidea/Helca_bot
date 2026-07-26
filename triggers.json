@@ -44,6 +44,12 @@
   },
   {
     "trigger_type": "S",
+    "trigger": "hentai",
+    "response_type": "M",
+    "response": "😢 no tak si za ní běž když ti nejsem dost dobrá 🤦"
+  },
+  {
+    "trigger_type": "S",
     "trigger": "angst",
     "response_type": "M",
     "response": "🤗 Angst is such a nice guy 🤗🤗🤗🤗"
