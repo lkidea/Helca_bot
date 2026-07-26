@@ -1,26 +1,338 @@
 [
   {
     "trigger_type": "S",
-    "trigger": "ahoj bote",
-    "response_type": "R",
-    "response": "Ahoj! Vnímám tě."
-  },
-  {
-    "trigger_type": "S",
-    "trigger": "dobré ráno",
+    "trigger": "<@792077426238160916>",
     "response_type": "M",
-    "response": "Přeji všem pěkné ráno! ☀️"
+    "response": "-# ||(Petříček je cute 🥰)||"
   },
   {
-    "trigger_type": "L",
-    "trigger": "pes",
-    "response_type": "R",
-    "response": "Haf! Někdo tady mluvil o psovi?"
+    "trigger_type": "",
+    "trigger": "a o čem",
+    "response_type": "",
+    "response": ""
   },
   {
-    "trigger_type": "L",
-    "trigger": "pivo",
-    "response_type": "M",
-    "response": "Na zdraví! 🍺"
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
+  },
+  {
+    "trigger_type": "",
+    "trigger": "",
+    "response_type": "",
+    "response": ""
   }
 ]
