@@ -89,6 +89,12 @@
     "response": "Za to, jak neumíš mluvnici, si to jen zasloužíš!"
   },
   {
+    "trigger_type": "S",
+    "trigger": "sakra Tome",
+    "response_type": "M",
+    "response": "Tomáškův oranžový moment 🧡✨"
+  },
+  {
     "trigger_type": "L",
     "trigger": "zeď",
     "response_type": "R",
