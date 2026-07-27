@@ -52,7 +52,10 @@
     "trigger_type": "S",
     "trigger": "angst",
     "response_type": "M",
-    "response": "🤗 Angst is such a nice guy 🤗🤗🤗🤗"
+    "response": [
+      "🤗 Angst is such a nice guy 🤗🤗🤗🤗",
+      "🇵🇱"
+    ]
   },
   {
     "trigger_type": "S",
@@ -90,6 +93,12 @@
   },
   {
     "trigger_type": "S",
+    "trigger": "Čerok je lopata",
+    "response_type": "R",
+    "response": "Lopaty jsou užitečné a nezlomné přesně jako právě Čerok 🤗"
+  },
+  {
+    "trigger_type": "S",
     "trigger": "sakra Tome",
     "response_type": "M",
     "response": "Tomáškův oranžový moment 🧡✨"
@@ -99,5 +108,31 @@
     "trigger": "zeď",
     "response_type": "R",
     "response": "Uuuuu! Zeď!? Mohla bych tam žít?? <:meow:1224269231751827506>"
-  }
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "Tome😭",
+    "response_type": "M",
+    "response": "It's a humr time! 🦞"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "Tomáš",
+    "response_type": "M",
+    "response": "https://klipy.com/gifs/thomas-friends-thomas-the-train",
+    "quantity:" 3
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "To máš blbý",
+    "response_type": "M",
+    "response": "Tomáš je faaajn, není blbý 😇"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "Idea",
+    "response_type": "M",
+    "response": "Libooooooooooooooooor!!!!!!🤗",
+    "quantity": 2
+  },
 ]
