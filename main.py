@@ -72,7 +72,48 @@ async def on_message(message: discord.Message):
             await execute_response(message, rule)
             return
             
-                
+    # Step B: If no 'S' trigger hit, process 'L' and 'SL' Triggers
+    if L_TRIGGERS or SL_TRIGGERS:
+        # 1. Tokenize and lemmatize the user's message ONCE for both trigger types
+        tokens = simplemma.simple_tokenizer(message.content)
+        message_lemmas = [simplemma.lemmatize(token, lang="cs").lower() for token in tokens]
+
+        # --- Process 'L' (Strict Sliding Window) Triggers ---
+        for rule in L_TRIGGERS:
+            trigger_tokens = simplemma.simple_tokenizer(rule["trigger"])
+            trigger_lemmas = [simplemma.lemmatize(t, lang="cs").lower() for t in trigger_tokens]
+            
+            trigger_len = len(trigger_lemmas)
+            msg_len = len(message_lemmas)
+            match_found = False
+            
+            if trigger_len > 0 and trigger_len <= msg_len:
+                for i in range(msg_len - trigger_len + 1):
+                    if message_lemmas[i:i+trigger_len] == trigger_lemmas:
+                        match_found = True
+                        break
+                        
+            if match_found:
+                await execute_response(message, rule)
+                return
+
+        # --- NEW Step C: Process 'SL' (Substring Lemmatized) Triggers ---
+        if SL_TRIGGERS:
+            # Re-join the lemmas into a single string to recreate the old, flexible substring behavior
+            lemmatized_message_string = " ".join(message_lemmas)
+
+            for rule in SL_TRIGGERS:
+                trigger_tokens = simplemma.simple_tokenizer(rule["trigger"])
+                trigger_lemmas = [simplemma.lemmatize(t, lang="cs").lower() for t in trigger_tokens]
+                lemmatized_trigger_string = " ".join(trigger_lemmas)
+
+                # Use the Python 'in' operator to check for any substring overlap
+                if lemmatized_trigger_string in lemmatized_message_string:
+                    await execute_response(message, rule)
+                    return
+
+
+    
     # Step B: If no 'S' trigger hit, process 'L' (Lemmatized) Triggers
     if L_TRIGGERS:
         # 1. Tokenize the user's message
