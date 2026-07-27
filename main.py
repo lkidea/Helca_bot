@@ -33,6 +33,7 @@ with open(TRIGGERS_FILE, "r", encoding="utf-8") as f:
 # Split into S and L lists at startup to optimize execution speed
 S_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "S"]
 L_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "L"]
+SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 
 
 # ---------------------------------------------------------
