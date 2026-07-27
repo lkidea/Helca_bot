@@ -60,8 +60,20 @@ async def on_message(message: discord.Message):
         return
 
     # Restrict to specified channels if configured
-    if ALLOWED_CHANNEL_IDS and message.channel.id not in ALLOWED_CHANNEL_IDS:
-        return
+    if ALLOWED_CHANNEL_IDS:
+        # Check if the channel is actually a thread
+        if isinstance(message.channel, discord.Thread):
+            # If it's a thread, check if its parent channel is on the allowed list
+            if message.channel.parent_id not in ALLOWED_CHANNEL_IDS:
+                return
+        # If it's a standard text channel, check its ID normally
+        elif message.channel.id not in ALLOWED_CHANNEL_IDS:
+            return
+            
+
+
+
+    
 
     content_lower = message.content.lower()
 
