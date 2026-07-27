@@ -158,5 +158,221 @@
       "",
       ""
     ]
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "čau",
+    "response_type": "R",
+    "response": "čusík <:meow:1224269231751827506>"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "česk",
+    "response_type": "R",
+    "response": "Przepraszam?"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "chci umřít",
+    "response_type": "R",
+    "response": "🤗🌺🌺 Neee, zítra to možná už bude lepší 🤗🤗🤗🤗"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "coacher",
+    "response_type": "R",
+    "response": "Juvaaaa, Kačer 🤗🤗"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "enda",
+    "response_type": "R",
+    "response": "Endííííík 🤗🤗"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "fuj",
+    "response_type": "R",
+    "response": "Mňam! 😋😋"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "gomoku club",
+    "response_type": "M",
+    "response": "Myslím, že GC idea vážně zruší, jestli mu s ním nikdo nepomůže víc 🥲"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "hakl",
+    "response_type": "R",
+    "response": "- ## ||🤗  *Haklátko*  🤗||"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "já jsem ale postih",
+    "response_type": "R",
+    "response": "Ale jdi tyyyyyy 🤗🤗🤗🤗🤗 \nNejsi postih 💝💝💝💝\n||Každý je někdy postižený||\n||Já už jsem třeba zapomněla, kolik čínských polívek jsem měla na oběd 😋 😋 🍜 <:coquette_Targaryen:1342947341791137875> <:facepalm_Magnus:1058232067877523548>||"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "kačer",
+    "response_type": "R",
+    "response": "Juvaaaa Kačer 🤗🤗"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "ky5",
+    "response_type": "R",
+    "response": "https://tenor.com/view/asdf-movie-punt-kick-donewiththis-gif-26537188"
+  },
+  {
+    "trigger_type": "SL",
+    "trigger": "lesbický helč",
+    "response_type": "R",
+    "response": "Lesbická Helča není real! <:apocalypse_Jussi:1207710627032997962>"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "líbit",
+    "response_type": "M",
+    "response": "🤗🤗🤗🤗 cute 🥰"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "líbí se mi",
+    "response_type": "M",
+    "response": "🌞"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "libor",
+    "response_type": "R",
+    "response": "Libor ten má taaak nádherné vlásky, <@891364671746084904> můžu se jich imaginárně dotknout?"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "lojz",
+    "response_type": "R",
+    "response": "🥺😻😻 Lojzíček má cute očíčka! 🤗🥺🥺🥺🥺"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "mám moc rád",
+    "response_type": "M",
+    "response": "🤗🤗🤗🤗"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "mám rád",
+    "response_type": "M",
+    "response": "🌞"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "nebýt mi dobře",
+    "response_type": "R",
+    "response": "🫂"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "necítím se dobře",
+    "response_type": "R",
+    "response": "🫂"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "mně neporazíš",
+    "response_type": "R",
+    "response": "https://tenor.com/view/grammar-police-drift-police-car-gif-17312786"
+  },
+  {
+    "trigger_type": "SL",
+    "trigger": "nejstarší piškvorkář",
+    "response_type": "R",
+    "response": "https://tenor.com/view/gandalf-old-man-naked-take-robe-off-funny-gif-17224126"
+  },
+  {
+    "trigger_type": "SL",
+    "trigger": "nejstarší český piškvorkář",
+    "response_type": "R",
+    "response": "https://tenor.com/view/gandalf-old-man-naked-take-robe-off-funny-gif-17224126"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "nemám energii",
+    "response_type": "R",
+    "response": "Můžu ti půjčit! 🤗\nPosílám ti imaginární 🔋!"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "neporazí",
+    "response_type": "M",
+    "response": "(Mě ale možná ano 🤭)"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "nepovede",
+    "response_type": "R",
+    "response": "proč by se to nemohlo povedlo?"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "nepodaří",
+    "response_type": "R",
+    "response": "proč by se to nemohlo podařilo?"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "nudl",
+    "response_type": "R",
+    "response": "anooooo, prosím 🍜🍜🍜🍜"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "oči",
+    "response_type": "R",
+    "response": "🥺 Očíčka jsou okna do duše. 🤗  A když máš někoho rád ❤️❤️,  tak to vidíš i v očích 🤗🤗\n❛⁠ ⁠ᴗ⁠ ⁠❛"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "polsk",
+    "response_type": "M",
+    "response": "❤️ <:Anakimp_smile:1343226645984579665>"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "šali",
+    "response_type": "M",
+    "response": "https://tenor.com/view/hrou-terorovou-tram-train-surfing-gif-14559665"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "se necít",
+    "response_type": "R",
+    "response": "🫂"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "špatn",
+    "response_type": "M",
+    "response": "<@891364671746084904> máme tady jeden takový ošklivý, nepěknou věc <:sumisplouchalik:1184223248829923400>"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "umím hrát",
+    "response_type": "R",
+    "response": "...to nemohu říct"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "zabij se",
+    "response_type": "M",
+    "response": "<@891364671746084904> není tohle na ban?"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "zapomněl",
+    "response_type": "R",
+    "response": "🤗 to se stává 🤗"
   }
 ]
