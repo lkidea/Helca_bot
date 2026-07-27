@@ -95,7 +95,10 @@
     "trigger_type": "S",
     "trigger": "Čerok je lopata",
     "response_type": "R",
-    "response": "Lopaty jsou užitečné a nezlomné přesně jako právě Čerok 🤗"
+    "response": [
+      "Lopaty jsou užitečné a nezlomné přesně jako právě Čerok 🤗",
+      "Ale porazil Zoliho v minutkách <:blush_Zoli:1198067831636504628><:goban_game:1400224446324805784><:pausechamp_Cerok:1209145557587861525>"
+    ]
   },
   {
     "trigger_type": "S",
@@ -135,4 +138,25 @@
     "response": "Libooooooooooooooooor!!!!!!🤗",
     "quantity": 2
   },
+  {
+    "trigger_type": "S",
+    "trigger": "wtf",
+    "response_type": "M",
+    "response": [
+      "Wróbel Tomáš fauxpas",
+      "Wróbel Tomáš fantastický",
+      "Wróbel Tomáš femboi"
+    ],
+    "quantity": 3
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "čerok miluje lojzu",
+    "response_type": "R",
+    "response": [
+      "https://tenor.com/view/gay-gif-25904425",
+      "",
+      ""
+    ]
+  }
 ]
