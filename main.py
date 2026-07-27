@@ -113,7 +113,7 @@ async def on_message(message: discord.Message):
                     return
 
 
-    
+    """
     # Step B: If no 'S' trigger hit, process 'L' (Lemmatized) Triggers
     if L_TRIGGERS:
         # 1. Tokenize the user's message
@@ -146,6 +146,7 @@ async def on_message(message: discord.Message):
             if match_found:
                 await execute_response(message, rule)
                 return
+    """
 
 
 async def execute_response(message: discord.Message, rule: dict):
