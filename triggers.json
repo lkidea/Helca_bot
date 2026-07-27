@@ -123,7 +123,7 @@
     "trigger": "Tomáš",
     "response_type": "M",
     "response": "https://klipy.com/gifs/thomas-friends-thomas-the-train",
-    "quantity:" 3
+    "quantity": 3
   },
   {
     "trigger_type": "S",
