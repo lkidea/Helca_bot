@@ -4,7 +4,7 @@
     "trigger": "<@792077426238160916>",
     "response_type": "M",
     "response": "-# ||(Petříček je cute 🥰)||",
-    "quantity": 5
+    "quantity": 7
   },
   {
     "trigger_type": "S",
@@ -61,7 +61,8 @@
     "trigger_type": "S",
     "trigger": "bone",
     "response_type": "R",
-    "response": "-# ||Juvaaa Bone <:Bone:1047218066351726663> <:bonebon:1084579253854666772> <:boneslash:1047224660581949531> <:oh_la_la_Bone:1207319365666603109> <:trippin_Bone:1080627886907732123>||"
+    "response": "-# ||Juvaaa Bone <:Bone:1047218066351726663> <:bonebon:1084579253854666772> <:boneslash:1047224660581949531> <:oh_la_la_Bone:1207319365666603109> <:trippin_Bone:1080627886907732123>||",
+    "quantity": 7
   },
   {
     "trigger_type": "S",
