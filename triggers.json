@@ -332,7 +332,11 @@
     "trigger_type": "L",
     "trigger": "oči",
     "response_type": "R",
-    "response": "🥺 Očíčka jsou okna do duše. 🤗  A když máš někoho rád ❤️❤️,  tak to vidíš i v očích 🤗🤗\n❛⁠ ⁠ᴗ⁠ ⁠❛"
+    "response": [
+      "🥺 Očíčka jsou okna do duše. 🤗  A když máš někoho rád ❤️❤️,  tak to vidíš i v očích 🤗🤗\n❛⁠ ⁠ᴗ⁠ ⁠❛",
+      "Tvoje oči jsou jako hlína,\nNa které rostou květy.",
+      "*Očíčka, jak roztomilá kočička*\n-# 😺 😸 😻 😽\n◕⁠ᴗ⁠◕  ◕⁠ᴗ⁠◕"
+    ]
   },
   {
     "trigger_type": "S",
