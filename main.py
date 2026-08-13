@@ -41,7 +41,8 @@ SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 
 
 
-'''
+#'''
+#v2
 # ---------------------------------------------------------
 # MorphoDiTa Setup & Lemmatization Helper
 # ---------------------------------------------------------
@@ -98,11 +99,13 @@ def get_lemmas_with_polarity(text: str) -> list:
                 result_lemmas.append(clean_lemma)
             
     return result_lemmas
+#'''
+
+
+
+
 '''
-
-
-
-
+#v1
 # ---------------------------------------------------------
 # MorphoDiTa Setup & Lemmatization Helper
 # ---------------------------------------------------------
@@ -159,6 +162,7 @@ def get_lemmas_with_polarity(text: str) -> list:
                 result_lemmas.append(clean_lemma.lower())
             
     return result_lemmas
+'''
 
     
 
