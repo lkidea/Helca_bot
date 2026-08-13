@@ -3,7 +3,10 @@
     "trigger_type": "S",
     "trigger": "<@792077426238160916>",
     "response_type": "M",
-    "response": "-# ||(Petříček je cute 🥰)||",
+    "response": [
+      "-# ||(Petříček je cute 🥰)||",
+      "🎶  Petře Petříčku... ☺️ Chlapče rozmilý ☺️  🎶"
+    ],
     "quantity": 7
   },
   {
@@ -146,7 +149,7 @@
     "response": [
       "Wróbel Tomáš fauxpas",
       "Wróbel Tomáš fantastický",
-      "Wróbel Tomáš femboi"
+      "Wróbel Tomáš fartsmella"
     ],
     "quantity": 3
   },
@@ -156,7 +159,6 @@
     "response_type": "R",
     "response": [
       "https://tenor.com/view/gay-gif-25904425",
-      "",
       ""
     ]
   },
@@ -173,8 +175,8 @@
     "response": "Przepraszam?"
   },
   {
-    "trigger_type": "S",
-    "trigger": "chci umřít",
+    "trigger_type": "L",
+    "trigger": "chtít umřít",
     "response_type": "R",
     "response": "🤗🌺🌺 Neee, zítra to možná už bude lepší 🤗🤗🤗🤗"
   },
