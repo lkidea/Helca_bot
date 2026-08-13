@@ -200,12 +200,28 @@ async def on_message(message: discord.Message):
 
     content_lower = message.content.lower()
 
+
+    # Step A: Check 'S' (Exact Substring) Triggers
+    for rule in S_TRIGGERS:
+        # Normalize the trigger into a list, whether it's a string or already a list
+        triggers = rule["trigger"] if isinstance(rule["trigger"], list) else [rule["trigger"]]
+        
+        for t in triggers:
+            target_str = t.lower()
+            if target_str in content_lower:
+                await execute_response(message, rule)
+                return # Exit on the first match found
+                
+
+
+    '''
     # Step A: Check 'S' (Exact Substring) Triggers
     for rule in S_TRIGGERS:
         target_str = rule["trigger"].lower()
         if target_str in content_lower:
             await execute_response(message, rule)
             return
+    '''
 
 
 
@@ -218,21 +234,24 @@ async def on_message(message: discord.Message):
 
         # --- Process 'L' (Strict Sliding Window) Triggers ---
         for rule in L_TRIGGERS:
-            trigger_lemmas = get_lemmas_with_polarity(rule["trigger"])
+            triggers = rule["trigger"] if isinstance(rule["trigger"], list) else [rule["trigger"]]
+
+            for t in triggers:
+                trigger_lemmas = get_lemmas_with_polarity(rule["trigger"])
             
-            trigger_len = len(trigger_lemmas)
-            msg_len = len(message_lemmas)
-            match_found = False
+                trigger_len = len(trigger_lemmas)
+                msg_len = len(message_lemmas)
+                match_found = False
             
-            if trigger_len > 0 and trigger_len <= msg_len:
-                for i in range(msg_len - trigger_len + 1):
-                    if message_lemmas[i:i+trigger_len] == trigger_lemmas:
-                        match_found = True
-                        break
+                if trigger_len > 0 and trigger_len <= msg_len:
+                    for i in range(msg_len - trigger_len + 1):
+                        if message_lemmas[i:i+trigger_len] == trigger_lemmas:
+                            match_found = True
+                            break
                         
-            if match_found:
-                await execute_response(message, rule)
-                return
+                if match_found:
+                    await execute_response(message, rule)
+                    return
 
         # --- NEW Step C: Process 'SL' (Substring Lemmatized) Triggers ---
         if SL_TRIGGERS:
@@ -240,13 +259,16 @@ async def on_message(message: discord.Message):
             lemmatized_message_string = " ".join(message_lemmas)
 
             for rule in SL_TRIGGERS:
-                trigger_lemmas = get_lemmas_with_polarity(rule["trigger"])
-                lemmatized_trigger_string = " ".join(trigger_lemmas)
+                triggers = rule["trigger"] if isinstance(rule["trigger"], list) else [rule["trigger"]]
 
-                # Use the Python 'in' operator to check for any substring overlap
-                if lemmatized_trigger_string in lemmatized_message_string:
-                    await execute_response(message, rule)
-                    return
+                for t in triggers:
+                    trigger_lemmas = get_lemmas_with_polarity(rule["trigger"])
+                    lemmatized_trigger_string = " ".join(trigger_lemmas)
+
+                    # Use the Python 'in' operator to check for any substring overlap
+                    if lemmatized_trigger_string in lemmatized_message_string:
+                        await execute_response(message, rule)
+                        return
                     
 
 
