@@ -5,7 +5,7 @@ import asyncio
 import discord
 from aiohttp import web
 import random
-import re
+# import re
 from ufal.morphodita import Tagger, Forms, TaggedLemmas, TokenRanges
 
 # ---------------------------------------------------------
