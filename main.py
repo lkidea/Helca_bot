@@ -4,8 +4,9 @@ import sys
 import asyncio
 import discord
 from aiohttp import web
-import simplemma
 import random
+import re
+from ufal.morphodita import Tagger, Forms, TaggedLemmas, TokenRanges
 
 # ---------------------------------------------------------
 # 1. Environment & Configuration Setup
@@ -35,6 +36,63 @@ S_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "S"]
 L_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "L"]
 SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 
+
+
+# ---------------------------------------------------------
+# MorphoDiTa Setup & Lemmatization Helper
+# ---------------------------------------------------------
+TAGGER_MODEL_PATH = "czech-morfflex-pdt-161115.tagger" # Ensure this file is in your directory
+
+if not os.path.exists(TAGGER_MODEL_PATH):
+    print(f"Fatal Error: MorphoDiTa model '{TAGGER_MODEL_PATH}' was not found.")
+    sys.exit(1)
+
+print("Loading MorphoDiTa tagger (this may take a few seconds)...")
+tagger = Tagger.load(TAGGER_MODEL_PATH)
+if not tagger:
+    print("Fatal Error: Could not load the MorphoDiTa tagger model.")
+    sys.exit(1)
+
+def get_lemmas_with_polarity(text: str) -> list:
+    """
+    Tokenizes and lemmatizes Czech text. 
+    Critically, it checks the PDT tag for polarity and prepends 'ne' 
+    to the lemma if the word is grammatically negated.
+    """
+    if not text.strip():
+        return []
+
+    tokenizer = tagger.newTokenizer()
+    tokenizer.setText(text)
+    
+    forms = Forms()
+    lemmas = TaggedLemmas()
+    tokens = TokenRanges()
+    
+    result_lemmas = []
+    
+    while tokenizer.nextSentence(forms, tokens):
+        tagger.tag(forms, lemmas)
+        for i in range(len(lemmas)):
+            # 1. Get the raw PDT lemma (which often contains derivation info like 'stát-1_^(stát_se_něco)')
+            pdt_lemma = lemmas[i].lemma
+            tag = lemmas[i].tag
+            
+            # 2. Clean the lemma to get just the base word.
+            # We strip anything after '_' or '`', and remove trailing numbers like '-1' or '-2'
+            clean_lemma = re.sub(r'[_`].*', '', pdt_lemma)
+            clean_lemma = re.sub(r'-\d+$', '', clean_lemma)
+            
+            # 3. Check for negation in the PDT tag (11th position, index 10)
+            if len(tag) > 10 and tag[10] == 'N':
+                # Prepend 'ne' if it's not already there (safety check)
+                if not clean_lemma.startswith("ne"):
+                    clean_lemma = "ne" + clean_lemma
+                    
+            result_lemmas.append(clean_lemma.lower())
+            
+    return result_lemmas
+    
 
 # ---------------------------------------------------------
 # 2. Discord Client Setup
@@ -69,9 +127,6 @@ async def on_message(message: discord.Message):
         # If it's a standard text channel, check its ID normally
         elif message.channel.id not in ALLOWED_CHANNEL_IDS:
             return
-            
-
-
 
     
 
@@ -83,7 +138,55 @@ async def on_message(message: discord.Message):
         if target_str in content_lower:
             await execute_response(message, rule)
             return
+
+
+
+
+
+    # Step B: If no 'S' trigger hit, process 'L' and 'SL' Triggers
+    if L_TRIGGERS or SL_TRIGGERS:
+        # 1. Tokenize and lemmatize using MorphoDiTa ONCE for both trigger types
+        message_lemmas = get_lemmas_with_polarity(message.content)
+
+        # --- Process 'L' (Strict Sliding Window) Triggers ---
+        for rule in L_TRIGGERS:
+            trigger_lemmas = get_lemmas_with_polarity(rule["trigger"])
             
+            trigger_len = len(trigger_lemmas)
+            msg_len = len(message_lemmas)
+            match_found = False
+            
+            if trigger_len > 0 and trigger_len <= msg_len:
+                for i in range(msg_len - trigger_len + 1):
+                    if message_lemmas[i:i+trigger_len] == trigger_lemmas:
+                        match_found = True
+                        break
+                        
+            if match_found:
+                await execute_response(message, rule)
+                return
+
+        # --- NEW Step C: Process 'SL' (Substring Lemmatized) Triggers ---
+        if SL_TRIGGERS:
+            # Re-join the lemmas into a single string to recreate the flexible substring behavior
+            lemmatized_message_string = " ".join(message_lemmas)
+
+            for rule in SL_TRIGGERS:
+                trigger_lemmas = get_lemmas_with_polarity(rule["trigger"])
+                lemmatized_trigger_string = " ".join(trigger_lemmas)
+
+                # Use the Python 'in' operator to check for any substring overlap
+                if lemmatized_trigger_string in lemmatized_message_string:
+                    await execute_response(message, rule)
+                    return
+                    
+
+
+
+
+
+
+    '''
     # Step B: If no 'S' trigger hit, process 'L' and 'SL' Triggers
     if L_TRIGGERS or SL_TRIGGERS:
         # 1. Tokenize and lemmatize the user's message ONCE for both trigger types
@@ -123,7 +226,7 @@ async def on_message(message: discord.Message):
                 if lemmatized_trigger_string in lemmatized_message_string:
                     await execute_response(message, rule)
                     return
-
+    '''
 
     """
     # Step B: If no 'S' trigger hit, process 'L' (Lemmatized) Triggers
