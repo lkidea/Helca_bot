@@ -39,6 +39,64 @@ SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 
 
 
+#'''
+#v3
+# ---------------------------------------------------------
+# MorphoDiTa Setup & Lemmatization Helper
+# ---------------------------------------------------------
+TAGGER_MODEL_PATH = "czech-morfflex-pdt-161115.tagger" # Ensure this file is in your directory
+
+if not os.path.exists(TAGGER_MODEL_PATH):
+    print(f"Fatal Error: MorphoDiTa model '{TAGGER_MODEL_PATH}' was not found.")
+    sys.exit(1)
+
+print("Loading MorphoDiTa tagger (this may take a few seconds)...")
+tagger = Tagger.load(TAGGER_MODEL_PATH)
+if not tagger:
+    print("Fatal Error: Could not load the MorphoDiTa tagger model.")
+    sys.exit(1)
+
+# Pre-fetch the Morpho dictionary to avoid calling it repeatedly in the loop
+morpho = tagger.getMorpho()
+
+def get_lemmas_with_polarity(text: str) -> list:
+    if not text.strip():
+        return []
+
+    tokenizer = tagger.newTokenizer()
+    tokenizer.setText(text)
+    
+    forms = Forms()
+    lemmas = TaggedLemmas()
+    tokens = TokenRanges()
+    
+    result_lemmas = []
+    
+    while tokenizer.nextSentence(forms, tokens):
+        tagger.tag(forms, lemmas)
+        for i in range(len(lemmas)):
+            raw_lemma = lemmas[i].lemma
+            tag = lemmas[i].tag
+
+            # 1. Native cleanup (Corrected method name)
+            clean_lemma = morpho.rawLemma(raw_lemma).lower()
+
+            # 2. Strip trailing homonym numbers (e.g., '-1')
+            # NOTE: You can actually delete this line! morpho.rawLemma() already removes the '-1'.
+            # clean_lemma = re.sub(r'-\d+$', '', clean_lemma) 
+            
+            # 3. Aggressively strip non-alphabetic/non-numeric characters (like attached emojis)
+            clean_lemma = re.sub(r'[^\w\s]', '', clean_lemma)
+
+            # 4. Now safely check if we have a valid word left
+            if clean_lemma.isalnum():
+                if len(tag) > 10 and tag[10] == 'N':
+                    if not clean_lemma.startswith("ne"):
+                        clean_lemma = "ne" + clean_lemma
+                    
+                result_lemmas.append(clean_lemma)
+#'''
+
 
 
 '''
