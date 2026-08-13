@@ -172,6 +172,12 @@
     "trigger_type": "S",
     "trigger": "česk",
     "response_type": "R",
+    "response": "Przepraszam? <:meow:1224269231751827506>"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "čeština",
+    "response_type": "R",
     "response": "Przepraszam?"
   },
   {
@@ -236,15 +242,15 @@
   },
   {
     "trigger_type": "L",
-    "trigger": "líbit",
-    "response_type": "M",
-    "response": "🤗🤗🤗🤗 cute 🥰"
-  },
-  {
-    "trigger_type": "L",
     "trigger": "líbí se mi",
     "response_type": "M",
     "response": "🌞"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "líbit",
+    "response_type": "M",
+    "response": "🤗🤗🤗🤗 cute 🥰"
   },
   {
     "trigger_type": "S",
@@ -279,6 +285,12 @@
   {
     "trigger_type": "S",
     "trigger": "necítím se dobře",
+    "response_type": "R",
+    "response": "🫂"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "necítil jsem se dobře",
     "response_type": "R",
     "response": "🫂"
   },
@@ -354,8 +366,8 @@
     "response": "https://tenor.com/view/hrou-terorovou-tram-train-surfing-gif-14559665"
   },
   {
-    "trigger_type": "S",
-    "trigger": "se necít",
+    "trigger_type": "L",
+    "trigger": "se necítit",
     "response_type": "R",
     "response": "🫂"
   },
@@ -378,8 +390,8 @@
     "response": "<@891364671746084904> není tohle na ban?"
   },
   {
-    "trigger_type": "S",
-    "trigger": "zapomněl",
+    "trigger_type": "L",
+    "trigger": "zapomenout",
     "response_type": "R",
     "response": "🤗 to se stává 🤗"
   }
