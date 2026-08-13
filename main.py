@@ -88,8 +88,10 @@ def get_lemmas_with_polarity(text: str) -> list:
                 # Prepend 'ne' if it's not already there (safety check)
                 if not clean_lemma.startswith("ne"):
                     clean_lemma = "ne" + clean_lemma
-                    
-            result_lemmas.append(clean_lemma.lower())
+
+            # NEW: Only keep the lemma if it's a word or number (strips punctuation)
+            if clean_lemma.isalnum():
+                result_lemmas.append(clean_lemma.lower())
             
     return result_lemmas
     
