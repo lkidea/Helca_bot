@@ -38,6 +38,71 @@ SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 
 
 
+
+
+
+# ---------------------------------------------------------
+# MorphoDiTa Setup & Lemmatization Helper
+# ---------------------------------------------------------
+TAGGER_MODEL_PATH = "czech-morfflex-pdt-161115.tagger" # Ensure this file is in your directory
+
+if not os.path.exists(TAGGER_MODEL_PATH):
+    print(f"Fatal Error: MorphoDiTa model '{TAGGER_MODEL_PATH}' was not found.")
+    sys.exit(1)
+
+print("Loading MorphoDiTa tagger (this may take a few seconds)...")
+tagger = Tagger.load(TAGGER_MODEL_PATH)
+if not tagger:
+    print("Fatal Error: Could not load the MorphoDiTa tagger model.")
+    sys.exit(1)
+
+# Pre-fetch the Morpho dictionary to avoid calling it repeatedly in the loop
+morpho = tagger.getMorpho()
+
+def get_lemmas_with_polarity(text: str) -> list:
+    """
+    Tokenizes and lemmatizes Czech text natively.
+    Critically, it checks the PDT tag for polarity and prepends 'ne' 
+    to the lemma if the word is grammatically negated.
+    """
+    if not text.strip():
+        return []
+
+    tokenizer = tagger.newTokenizer()
+    tokenizer.setText(text)
+    
+    forms = Forms()
+    lemmas = TaggedLemmas()
+    tokens = TokenRanges()
+    
+    result_lemmas = []
+    
+    while tokenizer.nextSentence(forms, tokens):
+        tagger.tag(forms, lemmas)
+        for i in range(len(lemmas)):
+            raw_lemma = lemmas[i].lemma
+            tag = lemmas[i].tag
+            
+            # 1. Use MorphoDiTa's native method to perfectly clean the lemma
+            clean_lemma = morpho.rawLemmaToLemma(raw_lemma).lower()
+
+            # Filter out punctuation and symbols right away
+            if clean_lemma.isalnum():
+
+                # 2. Check for negation in the PDT tag (11th position, index 10)
+                if len(tag) > 10 and tag[10] == 'N':
+                    # Prepend 'ne' if it's not already there
+                    if not clean_lemma.startswith("ne"):
+                        clean_lemma = "ne" + clean_lemma
+                    
+                result_lemmas.append(clean_lemma)
+            
+    return result_lemmas
+    
+
+
+
+'''
 # ---------------------------------------------------------
 # MorphoDiTa Setup & Lemmatization Helper
 # ---------------------------------------------------------
@@ -94,6 +159,7 @@ def get_lemmas_with_polarity(text: str) -> list:
                 result_lemmas.append(clean_lemma.lower())
             
     return result_lemmas
+'''
     
 
 # ---------------------------------------------------------
