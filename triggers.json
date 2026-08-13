@@ -7,7 +7,7 @@
   },
   {
     "trigger_type": "L",
-    "trigger": "Česko-Slovensko",
+    "trigger": ["jedna","dvě","honza"],
     "response_type": "R",
     "response": "O čemkolněco trás"
   },
