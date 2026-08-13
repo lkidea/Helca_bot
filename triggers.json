@@ -1,7 +1,7 @@
 [
   {
     "trigger_type": "L",
-    "trigger": "email",
+    "trigger": "červeno-modrý",
     "response_type": "R",
     "response": "O čemko"
   },
