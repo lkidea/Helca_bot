@@ -1,2 +1,2 @@
 discord.py>=2.3.0
-simplemma>=0.9.1
+ufal.morphodita>=1.3.0
