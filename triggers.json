@@ -6,6 +6,12 @@
     "response": "O čemko"
   },
   {
+    "trigger_type": "L",
+    "trigger": ["jedna","dvě","honza"],
+    "response_type": "R",
+    "response": "O čemkolněco trás"
+  },
+  {
     "trigger_type": "S",
     "trigger": "<@792077426238160916>",
     "response_type": "M",
