@@ -6,7 +6,7 @@ import discord
 from aiohttp import web
 import random
 import re
-from ufal.morphodita import Morpho, Tagger, Forms, TaggedLemmas, TokenRanges
+from ufal.morphodita import Tagger, Forms, TaggedLemmas, TokenRanges
 
 # ---------------------------------------------------------
 # 1. Environment & Configuration Setup
@@ -41,7 +41,7 @@ SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 
 
 
-#'''
+'''
 #v2
 # ---------------------------------------------------------
 # MorphoDiTa Setup & Lemmatization Helper
@@ -81,7 +81,7 @@ def get_lemmas_with_polarity(text: str) -> list:
             tag = lemmas[i].tag
             
             # 1. Native cleanup
-            clean_lemma = Morpho.rawLemmaToLemma(raw_lemma).lower()
+            clean_lemma = morpho.rawLemmaToLemma(raw_lemma).lower()
 
             # 2. Strip trailing homonym numbers (e.g., '-1')
             clean_lemma = re.sub(r'-\d+$', '', clean_lemma)
@@ -99,7 +99,7 @@ def get_lemmas_with_polarity(text: str) -> list:
                 result_lemmas.append(clean_lemma)
             
     return result_lemmas
-#'''
+'''
 
 
 
