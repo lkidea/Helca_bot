@@ -39,7 +39,7 @@ SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 
 
 
-#'''
+'''
 #v3
 # ---------------------------------------------------------
 # MorphoDiTa Setup & Lemmatization Helper
@@ -83,7 +83,7 @@ def get_lemmas_with_polarity(text: str) -> list:
 
             # 2. Strip trailing homonym numbers (e.g., '-1')
             # NOTE: You can actually delete this line! morpho.rawLemma() already removes the '-1'.
-            clean_lemma = re.sub(r'-\d+$', '', clean_lemma) 
+            # clean_lemma = re.sub(r'-\d+$', '', clean_lemma) 
             
             # 3. Aggressively strip non-alphabetic/non-numeric characters (like attached emojis)
             clean_lemma = re.sub(r'[^\w\s]', '', clean_lemma)
@@ -95,7 +95,7 @@ def get_lemmas_with_polarity(text: str) -> list:
                         clean_lemma = "ne" + clean_lemma
                     
                 result_lemmas.append(clean_lemma)
-#'''
+'''
 
 
 
