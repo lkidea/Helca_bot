@@ -208,7 +208,7 @@ async def on_message(message: discord.Message):
     # Step A: Check 'S' (Exact Substring) Triggers
     for rule in S_TRIGGERS:
         for t in rule["trigger"]:
-            target_str = rule["trigger"].lower()
+            target_str = t.lower()
             if target_str in content_lower:
                 await execute_response(message, rule)
                 return
@@ -225,7 +225,7 @@ async def on_message(message: discord.Message):
         # --- Process 'L' (Strict Sliding Window) Triggers ---
         for rule in L_TRIGGERS:
             for t in rule["trigger"]:
-                trigger_lemmas = get_lemmas_with_polarity(rule["trigger"])
+                trigger_lemmas = get_lemmas_with_polarity(t)
             
                 trigger_len = len(trigger_lemmas)
                 msg_len = len(message_lemmas)
@@ -248,7 +248,7 @@ async def on_message(message: discord.Message):
 
             for rule in SL_TRIGGERS:
                 for t in rule["trigger"]:
-                    trigger_lemmas = get_lemmas_with_polarity(rule["trigger"])
+                    trigger_lemmas = get_lemmas_with_polarity(t)
                     lemmatized_trigger_string = " ".join(trigger_lemmas)
 
                     # Use the Python 'in' operator to check for any substring overlap
