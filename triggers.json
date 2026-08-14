@@ -163,6 +163,12 @@
     ]
   },
   {
+    "trigger_type": "L",
+    "trigger": "co xwcx mám dělat",
+    "response_type": "R",
+    "response": "hrabat"
+  },
+  {
     "trigger_type": "S",
     "trigger": "čau",
     "response_type": "R",
