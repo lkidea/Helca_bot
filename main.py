@@ -44,7 +44,73 @@ SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 
 
 
-'''
+
+def check_list_match_with_wildcards(trigger_lemmas: list, message_lemmas: list, start_idx: int) -> bool:
+    """
+    Recursively scans list elements to match trigger lemmas to message lemmas.
+    Preserves strict word boundaries while allowing 'xwildcardx' to equal 0 or 1 word.
+    """
+    def helper(t_idx, m_idx):
+        # If we have successfully checked all words in the trigger, it's a match!
+        if t_idx == len(trigger_lemmas):
+            return True
+        
+        t_word = trigger_lemmas[t_idx]
+        
+        # If the current trigger word is the wildcard
+        if "xwildcardx" in t_word:
+            # PATH 1 (0 words): Skip the wildcard in the trigger, but stay on the same message word
+            if helper(t_idx + 1, m_idx):
+                return True
+            
+            # PATH 2 (1 word): Skip the wildcard in the trigger, and advance past 1 message word
+            if m_idx < len(message_lemmas) and helper(t_idx + 1, m_idx + 1):
+                return True
+            
+            return False
+            
+        # If it's a normal word, require an exact strict list match
+        else:
+            if m_idx < len(message_lemmas) and t_word == message_lemmas[m_idx]:
+                return helper(t_idx + 1, m_idx + 1)
+            
+            return False
+
+    # Start the recursive scan from the current starting index
+    return helper(0, start_idx)
+    
+
+
+
+
+def check_wildcard_match(target_trigger: str, message_text: str, strict: bool = False) -> bool:
+    """
+    Safely evaluates triggers containing 'xwildcardx'.
+    Handles matching 1 word, 0 words, and preserves correct spacing.
+    """
+    # 1. Escape the trigger to avoid regex errors from special characters
+    escaped_trigger = re.escape(target_trigger)
+    
+    # 2. Replace the escaped " xwildcardx " with our flexible regex pattern.
+    # r"\ xwildcardx\ " matches the word WITH spaces around it.
+    # r"(?:\s+\w+)?\s+" means: "optionally match a space and a word, followed by a space"
+    pattern = escaped_trigger.replace(r"\ xwildcardx\ ", r"(?:\s+\w+)?\s+")
+    
+    # 3. Fallback: just in case "xwildcardx" is at the very start/end without spaces
+    pattern = pattern.replace(r"xwildcardx", r"(?:\w+)?")
+    
+    # 4. If this is an 'L' trigger, wrap it in word boundaries to keep it strict
+    if strict:
+        pattern = r"\b" + pattern + r"\b"
+        
+    return bool(re.search(pattern, message_text))
+    
+
+
+
+
+
+#'''
 #v2
 # ---------------------------------------------------------
 # MorphoDiTa Setup & Lemmatization Helper
@@ -102,10 +168,10 @@ def get_lemmas_with_polarity(text: str) -> list:
                 result_lemmas.append(clean_lemma)
                 
     return result_lemmas
-'''
-
-
 #'''
+
+
+'''
 #v1
 # ---------------------------------------------------------
 # MorphoDiTa Setup & Lemmatization Helper
@@ -163,7 +229,7 @@ def get_lemmas_with_polarity(text: str) -> list:
                 result_lemmas.append(clean_lemma.lower())
             
     return result_lemmas
-#'''
+'''
 
     
 
@@ -209,7 +275,14 @@ async def on_message(message: discord.Message):
     for rule in S_TRIGGERS:
         for t in rule["trigger"]:
             target_str = t.lower()
-            if target_str in content_lower:
+            
+            if "xwildcardx" in target_str:
+                if check_wildcard_match(target_str, content_lower, strict=False):
+                    await execute_response(message, rule)
+                    return
+                    
+            # --- ORIGINAL LOGIC ---
+            elif target_str in content_lower:
                 await execute_response(message, rule)
                 return
 
@@ -226,20 +299,31 @@ async def on_message(message: discord.Message):
         for rule in L_TRIGGERS:
             for t in rule["trigger"]:
                 trigger_lemmas = get_lemmas_with_polarity(t)
-            
                 trigger_len = len(trigger_lemmas)
                 msg_len = len(message_lemmas)
                 match_found = False
-            
-                if trigger_len > 0 and trigger_len <= msg_len:
-                    for i in range(msg_len - trigger_len + 1):
-                        if message_lemmas[i:i+trigger_len] == trigger_lemmas:
+
+                # --- NEW WILDCARD LOGIC FOR LISTS ---
+                if "xwildcardx" in t.lower():
+                    # Slide the starting point across the message
+                    for i in range(msg_len):
+                        if check_list_match_with_wildcards(trigger_lemmas, message_lemmas, i):
                             match_found = True
                             break
+                            
+                # --- ORIGINAL STRICT SLICE LOGIC ---
+                else:
+                    if trigger_len > 0 and trigger_len <= msg_len:
+                        for i in range(msg_len - trigger_len + 1):
+                            if message_lemmas[i:i+trigger_len] == trigger_lemmas:
+                                match_found = True
+                                break
                         
                 if match_found:
                     await execute_response(message, rule)
                     return
+
+        
 
         # --- NEW Step C: Process 'SL' (Substring Lemmatized) Triggers ---
         if SL_TRIGGERS:
@@ -248,13 +332,25 @@ async def on_message(message: discord.Message):
 
             for rule in SL_TRIGGERS:
                 for t in rule["trigger"]:
-                    trigger_lemmas = get_lemmas_with_polarity(t)
-                    lemmatized_trigger_string = " ".join(trigger_lemmas)
+                    
+                    # --- NEW WILDCARD LOGIC ---
+                    if "xwildcardx" in t.lower():
+                        trigger_lemmas = get_lemmas_with_polarity(t)
+                        lemmatized_trigger_string = " ".join(trigger_lemmas)
+                        
+                        if check_wildcard_match(lemmatized_trigger_string, lemmatized_message_string, strict=False):
+                            await execute_response(message, rule)
+                            return
+                    
+                    # --- ORIGINAL LOGIC ---
+                    else:
+                        trigger_lemmas = get_lemmas_with_polarity(t)
+                        lemmatized_trigger_string = " ".join(trigger_lemmas)
 
-                    # Use the Python 'in' operator to check for any substring overlap
-                    if lemmatized_trigger_string in lemmatized_message_string:
-                        await execute_response(message, rule)
-                        return
+                        # Use the Python 'in' operator to check for any substring overlap
+                        if lemmatized_trigger_string in lemmatized_message_string:
+                            await execute_response(message, rule)
+                            return
                     
 
 
