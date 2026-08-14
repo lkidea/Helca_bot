@@ -262,11 +262,14 @@
     "trigger_type": "S",
     "trigger": "lojz",
     "response_type": "R",
-    "response": "🥺😻😻 Lojzíček má cute očíčka! 🤗🥺🥺🥺🥺"
+    "response": [
+      "🥺😻😻 Lojzíček má cute očíčka! 🤗🥺🥺🥺🥺",
+      "Vždyť Lojza je Alois pozpátku."
+    ]
   },
   {
     "trigger_type": "L",
-    "trigger": "mám moc rád",
+    "trigger": "mám xwcx rád",
     "response_type": "M",
     "response": "🤗🤗🤗🤗"
   },
