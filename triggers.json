@@ -7,19 +7,19 @@
   },
   {
     "trigger_type": "L",
-    "trigger": "nech xwildcardx být",
+    "trigger": "nech xwcx být",
     "response_type": "R",
     "response": "mrrrrr"
   },
   {
     "trigger_type": "SL",
-    "trigger": "nenechávejte xwildcardx být",
+    "trigger": "nenechávejte xwcx být",
     "response_type": "R",
     "response": "grrrrr"
   },
   {
     "trigger_type": "S",
-    "trigger": "špagety s xwildcardx dobrou omáčkou",
+    "trigger": "špagety s xwcx dobrou omáčkou",
     "response_type": "R",
     "response": "mmmmmmmmm"
   },
