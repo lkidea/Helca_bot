@@ -48,7 +48,7 @@ SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 def check_list_match_with_wildcards(trigger_lemmas: list, message_lemmas: list, start_idx: int) -> bool:
     """
     Recursively scans list elements to match trigger lemmas to message lemmas.
-    Preserves strict word boundaries while allowing 'xwildcardx' to equal 0 or 1 word.
+    Preserves strict word boundaries while allowing 'xwcx' to equal 0 or 1 word.
     """
     def helper(t_idx, m_idx):
         # If we have successfully checked all words in the trigger, it's a match!
@@ -58,7 +58,7 @@ def check_list_match_with_wildcards(trigger_lemmas: list, message_lemmas: list, 
         t_word = trigger_lemmas[t_idx]
         
         # If the current trigger word is the wildcard
-        if "xwildcardx" in t_word:
+        if "xwcx" in t_word:
             # PATH 1 (0 words): Skip the wildcard in the trigger, but stay on the same message word
             if helper(t_idx + 1, m_idx):
                 return True
@@ -85,19 +85,19 @@ def check_list_match_with_wildcards(trigger_lemmas: list, message_lemmas: list, 
 
 def check_wildcard_match(target_trigger: str, message_text: str, strict: bool = False) -> bool:
     """
-    Safely evaluates triggers containing 'xwildcardx'.
+    Safely evaluates triggers containing 'xwcx'.
     Handles matching 1 word, 0 words, and preserves correct spacing.
     """
     # 1. Escape the trigger to avoid regex errors from special characters
     escaped_trigger = re.escape(target_trigger)
     
-    # 2. Replace the escaped " xwildcardx " with our flexible regex pattern.
-    # r"\ xwildcardx\ " matches the word WITH spaces around it.
+    # 2. Replace the escaped " xwcx " with our flexible regex pattern.
+    # r"\ xwcx\ " matches the word WITH spaces around it.
     # r"(?:\s+\w+)?\s+" means: "optionally match a space and a word, followed by a space"
-    pattern = escaped_trigger.replace(r"\ xwildcardx\ ", r"(?:\s+\w+)?\s+")
+    pattern = escaped_trigger.replace(r"\ xwcx\ ", r"(?:\s+\w+)?\s+")
     
-    # 3. Fallback: just in case "xwildcardx" is at the very start/end without spaces
-    pattern = pattern.replace(r"xwildcardx", r"(?:\w+)?")
+    # 3. Fallback: just in case "xwcx" is at the very start/end without spaces
+    pattern = pattern.replace(r"xwcx", r"(?:\w+)?")
     
     # 4. If this is an 'L' trigger, wrap it in word boundaries to keep it strict
     if strict:
@@ -276,7 +276,7 @@ async def on_message(message: discord.Message):
         for t in rule["trigger"]:
             target_str = t.lower()
             
-            if "xwildcardx" in target_str:
+            if "xwcx" in target_str:
                 if check_wildcard_match(target_str, content_lower, strict=False):
                     await execute_response(message, rule)
                     return
@@ -304,7 +304,7 @@ async def on_message(message: discord.Message):
                 match_found = False
 
                 # --- NEW WILDCARD LOGIC FOR LISTS ---
-                if "xwildcardx" in t.lower():
+                if "xwcx" in t.lower():
                     # Slide the starting point across the message
                     for i in range(msg_len):
                         if check_list_match_with_wildcards(trigger_lemmas, message_lemmas, i):
@@ -334,7 +334,7 @@ async def on_message(message: discord.Message):
                 for t in rule["trigger"]:
                     
                     # --- NEW WILDCARD LOGIC ---
-                    if "xwildcardx" in t.lower():
+                    if "xwcx" in t.lower():
                         trigger_lemmas = get_lemmas_with_polarity(t)
                         lemmatized_trigger_string = " ".join(trigger_lemmas)
                         
