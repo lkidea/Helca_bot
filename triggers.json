@@ -7,6 +7,24 @@
   },
   {
     "trigger_type": "L",
+    "trigger": "nech xwildcardx byť",
+    "response_type": "R",
+    "response": "mrrrrr"
+  },
+  {
+    "trigger_type": "SL",
+    "trigger": "nenechávajte xwildcardx byť",
+    "response_type": "R",
+    "response": "grrrrr"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "špagety s xwildcardx dobrou omáčkou",
+    "response_type": "R",
+    "response": "mmmmmmmmm"
+  },
+  {
+    "trigger_type": "L",
     "trigger": ["jedna","dvě","honza"],
     "response_type": "R",
     "response": "O čemkolněco trás"
