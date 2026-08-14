@@ -5,6 +5,9 @@ L i SL vynechává interpunkci a emoji, S ani jedno
 
 R je reply, M je jen prostá message 
 
+"quantity": x
+=> odpověď se random spustí ve statisticky 1/x případů 
+
 
 xwcx je wildcard za 1 nebo 0 slov... lze jich v jednom triggeru použít víc
 funguje u všech typů, u L i s tím porovnáváním po jednom slovu, ale ještě jsem to důkladně nezkoušel, zda nejsou bugy
