@@ -1,6 +1,36 @@
 [
   {
     "trigger_type": "L",
+    "trigger": "lol",
+    "response_type": "M",
+    "response": "Pomoc, mě tohle smrtelně zardousí vtipama"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": ["Helčo máš moje posvěcení", "Helčo máš mé posvěcení", "Máš moje posvěcení Helčo", "Máš mé posvěcení Helčo"],
+    "response_type": "R",
+    "response": "Děkuji za tvoje posvícení.\nTedaaaa, jak se to řekne česky?\n\n**OBĚTOVÁNÍ!**"
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "takové",
+    "response_type": "M",
+    "response": "takové takové takové"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": ["olj", "tasemnice"],
+    "response_type": "M",
+    "response": "Tasemnice.... Oni jsou naši hostitelé"
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "mám xwcx rád xwcx šťávu",
+    "response_type": "R",
+    "response": "Já mám ráda vodu ze záchoda."
+  },
+  {
+    "trigger_type": "L",
     "trigger": "šest",
     "response_type": "R",
     "response": ["sedm <:meow:1224269231751827506>", "9 😈"]
@@ -101,11 +131,12 @@
     "response_type": "R",
     "response": [
       "Lopaty jsou užitečné a nezlomné přesně jako právě Čerok 🤗",
-      "Ale porazil Zoliho v minutkách <:blush_Zoli:1198067831636504628><:goban_game:1400224446324805784><:pausechamp_Cerok:1209145557587861525>"
+      "Ale porazil Zoliho v minutkách <:blush_Zoli:1198067831636504628><:goban_game:1400224446324805784><:pausechamp_Cerok:1209145557587861525>",
+      "Je to Čerok. Lopata možná, ale určitě ne!"
     ]
   },
   {
-    "trigger_type": "S",
+    "trigger_type": "L",
     "trigger": "sakra Tome",
     "response_type": "M",
     "response": "Tomáškův oranžový moment 🧡✨"
@@ -164,7 +195,7 @@
   },
   {
     "trigger_type": "L",
-    "trigger": "co xwcx mám dělat",
+    "trigger": "co xwcx mám xwcx dělat",
     "response_type": "R",
     "response": "hrabat"
   },
@@ -264,38 +295,35 @@
     "response_type": "R",
     "response": [
       "🥺😻😻 Lojzíček má cute očíčka! 🤗🥺🥺🥺🥺",
-      "Vždyť Lojza je Alois pozpátku."
+      "Vždyť Lojza je Alois pozpátku..."
     ]
   },
   {
     "trigger_type": "L",
     "trigger": "mám xwcx rád",
     "response_type": "M",
-    "response": "🤗🤗🤗🤗"
+    "response": [
+      "🤗🤗🤗🤗",
+      "🌞"
+    ]
   },
   {
     "trigger_type": "L",
-    "trigger": "mám rád",
-    "response_type": "M",
-    "response": "🌞"
-  },
-  {
-    "trigger_type": "L",
-    "trigger": "nebýt mi dobře",
+    "trigger": ["nebýt mi xwcx dobře", "necítil jsem se xwcx dobře"],
     "response_type": "R",
-    "response": "🫂"
+    "response": [
+      "🫂",
+      "Každý člověk má jiný bod tání 🤗"
+    ]
   },
   {
     "trigger_type": "S",
-    "trigger": "necítím se dobře",
+    "trigger": "necítím se xwcx dobře",
     "response_type": "R",
-    "response": "🫂"
-  },
-  {
-    "trigger_type": "S",
-    "trigger": "necítil jsem se dobře",
-    "response_type": "R",
-    "response": "🫂"
+    "response": [
+      "🫂",
+      "Každý člověk má jiný bod tání 🤗"
+    ]
   },
   {
     "trigger_type": "S",
@@ -305,13 +333,7 @@
   },
   {
     "trigger_type": "SL",
-    "trigger": "nejstarší piškvorkář",
-    "response_type": "R",
-    "response": "https://tenor.com/view/gandalf-old-man-naked-take-robe-off-funny-gif-17224126"
-  },
-  {
-    "trigger_type": "SL",
-    "trigger": "nejstarší český piškvorkář",
+    "trigger": ["nejstarší piškvorkář", "nejstarší český piškvorkář"],
     "response_type": "R",
     "response": "https://tenor.com/view/gandalf-old-man-naked-take-robe-off-funny-gif-17224126"
   },
@@ -347,7 +369,7 @@
   },
   {
     "trigger_type": "L",
-    "trigger": "oči",
+    "trigger": ["oči", "očíčka", "očička"]
     "response_type": "R",
     "response": [
       "🥺 Očíčka jsou okna do duše. 🤗  A když máš někoho rád ❤️❤️,  tak to vidíš i v očích 🤗🤗\n❛⁠ ⁠ᴗ⁠ ⁠❛",
@@ -367,12 +389,6 @@
     "trigger": "šali",
     "response_type": "M",
     "response": "https://tenor.com/view/hrou-terorovou-tram-train-surfing-gif-14559665"
-  },
-  {
-    "trigger_type": "L",
-    "trigger": "se necítit",
-    "response_type": "R",
-    "response": "🫂"
   },
   {
     "trigger_type": "S",
