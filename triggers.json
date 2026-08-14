@@ -7,13 +7,13 @@
   },
   {
     "trigger_type": "L",
-    "trigger": "nech xwildcardx byť",
+    "trigger": "nech xwildcardx být",
     "response_type": "R",
     "response": "mrrrrr"
   },
   {
     "trigger_type": "SL",
-    "trigger": "nenechávajte xwildcardx byť",
+    "trigger": "nenechávejte xwildcardx být",
     "response_type": "R",
     "response": "grrrrr"
   },
