@@ -3,7 +3,7 @@
     "trigger_type": "L",
     "trigger": "šest",
     "response_type": "R",
-    "response": ["sedm <:meow:1224269231751827506>", "9"]
+    "response": ["sedm <:meow:1224269231751827506>", "9 😈"]
   },
   {
     "trigger_type": "S",
@@ -187,10 +187,10 @@
     "response": "🤗🌺🌺 Neee, zítra to možná už bude lepší 🤗🤗🤗🤗"
   },
   {
-    "trigger_type": "S",
-    "trigger": "coacher",
+    "trigger_type": "L",
+    "trigger": ["kačer", "coacher"],
     "response_type": "R",
-    "response": "Juvaaaa, Kačer 🤗🤗"
+    "response": "Juvaaaa Kačer 🤗🤗"
   },
   {
     "trigger_type": "S",
@@ -221,12 +221,6 @@
     "trigger": "já jsem ale postih",
     "response_type": "R",
     "response": "Ale jdi tyyyyyy 🤗🤗🤗🤗🤗 \nNejsi postih 💝💝💝💝\n||Každý je někdy postižený||\n||Já už jsem třeba zapomněla, kolik čínských polívek jsem měla na oběd 😋 😋 🍜 <:coquette_Targaryen:1342947341791137875> <:facepalm_Magnus:1058232067877523548>||"
-  },
-  {
-    "trigger_type": "L",
-    "trigger": "kačer",
-    "response_type": "R",
-    "response": "Juvaaaa Kačer 🤗🤗"
   },
   {
     "trigger_type": "S",
