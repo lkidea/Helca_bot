@@ -7,13 +7,13 @@
   },
   {
     "trigger_type": "L",
-    "trigger": "nech xwcx být",
+    "trigger": "nech xwcx ji",
     "response_type": "R",
     "response": "mrrrrr"
   },
   {
     "trigger_type": "SL",
-    "trigger": "nenechávejte xwcx být",
+    "trigger": "nenechávejte ho xwcx",
     "response_type": "R",
     "response": "grrrrr"
   },
