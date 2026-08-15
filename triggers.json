@@ -7,6 +7,32 @@
   },
   {
     "trigger_type": "L",
+    "trigger": "jít",
+    "response_type": "R",
+    "response": [
+      "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_gregi_smol_2.gif",
+      "https://klipy.com/gifs/cat-cockroach-cat-running-away",
+      "https://klipy.com/gifs/how-did-he-do-that-cat-levitate",
+      "https://klipy.com/gifs/cat-aga",
+      "https://klipy.com/gifs/cat-black-28",
+      "https://klipy.com/gifs/cats-cats-running-1",
+      "https://klipy.com/gifs/cats-messy",
+      "https://tenor.com/bH6WN.gif",
+      "https://klipy.com/gifs/but-why-but-why-though-1",
+      "https://tenor.com/view/pivniodboj-podboj-drz-hubu-shut-up-gif-15517436",
+      "https://tenor.com/view/cat-gif-9271737585583266589",
+      "https://tenor.com/view/oh-i-wish-i-could-but-i-don%27t-want-to-friends-hindi-gif-10353782185832166329",
+      "https://tenor.com/view/buffy-spike-i-dont-care-dont-care-gif-6097320",
+      "https://tenor.com/view/udd-cow-walk-gif-10805537",
+      "https://tenor.com/view/cat-climbs-out-of-couch-im-ready-gif-21355113",
+      "https://tenor.com/view/dolphin-swim-backwards-dont-care-lol-bye-gif-5000449",
+      "https://tenor.com/view/nope-cute-anime-cute-anime-girl-gif-26293394",
+      "https://tenor.com/view/fuck-you-cute-fuck-you-nice-fuck-you-flipping-you-off-nicely-flipping-you-off-gif-15221580565064576473"
+    ],
+    "quantity": 1
+  },
+  {
+    "trigger_type": "L",
     "trigger": ["Helčo máš moje posvěcení", "Helčo máš mé posvěcení", "Máš moje posvěcení Helčo", "Máš mé posvěcení Helčo"],
     "response_type": "R",
     "response": "Děkuji za tvoje posvícení.\nTedaaaa, jak se to řekne česky?\n\n**OBĚTOVÁNÍ!**"
@@ -202,7 +228,7 @@
     "response_type": "R",
     "response": [
       "https://tenor.com/view/gay-gif-25904425",
-      ""
+      "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_haruka_and_akihiko_tickled_1_by_riug_djpm1j3-350t.jpg"
     ]
   },
   {
