@@ -6,6 +6,20 @@
     "response": "Pomoc, mě tohle smrtelně zardousí vtipama"
   },
   {
+    "trigger_type": "S",
+    "trigger": "<@630065338423443478>",
+    "response_type": "R",
+    "response": "Anooooooo...? <:meow:1224269231751827506>",
+    "quantity": 1
+  },
+  {
+    "trigger_type": "L",
+    "trigger": ["ty nejsi xwcx Helča", "ty nejsi ta xwcx Helča"],
+    "response_type": "R",
+    "response": "Všechna Helča je správná Helča 👅",
+    "quantity": 1
+  },
+  {
     "trigger_type": "L",
     "trigger": "jít",
     "response_type": "R",
