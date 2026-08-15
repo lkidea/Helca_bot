@@ -61,7 +61,10 @@
     "trigger_type": "L",
     "trigger": "adu",
     "response_type": "M",
-    "response": "https://tenor.com/view/kv%C4%9Btinky-pro-ad%C3%A9lku-gif-9241101598964541795"
+    "response": [
+      "https://tenor.com/view/kv%C4%9Btinky-pro-ad%C3%A9lku-gif-9241101598964541795",
+      "a já už taky du!"
+    ]
   },
   {
     "trigger_type": "S",
@@ -94,8 +97,11 @@
     "trigger_type": "S",
     "trigger": "bone",
     "response_type": "R",
-    "response": "-# ||Juvaaa Bone <:Bone:1047218066351726663> <:bonebon:1084579253854666772> <:boneslash:1047224660581949531> <:oh_la_la_Bone:1207319365666603109> <:trippin_Bone:1080627886907732123>||",
-    "quantity": 7
+    "response": [
+      "-# ||Juvaaa Bone <:Bone:1047218066351726663> <:bonebon:1084579253854666772> <:boneslash:1047224660581949531> <:oh_la_la_Bone:1207319365666603109> <:trippin_Bone:1080627886907732123>||",
+      "Boník 🤗🤗"
+    ],
+    "quantity": 4
   },
   {
     "trigger_type": "S",
@@ -167,11 +173,17 @@
     "response": "Tomáš je faaajn, není blbý 😇"
   },
   {
+    "trigger_type": "S",
+    "trigger": "To máš za to",
+    "response_type": "R",
+    "response": "Jistěže Tomáš 😺 a jistěže je zlato✨ 🤗"
+  },
+  {
     "trigger_type": "L",
     "trigger": "Idea",
     "response_type": "M",
     "response": "Libooooooooooooooooor!!!!!!🤗",
-    "quantity": 2
+    "quantity": 3
   },
   {
     "trigger_type": "S",
@@ -227,19 +239,27 @@
     "trigger_type": "L",
     "trigger": ["kačer", "coacher"],
     "response_type": "R",
-    "response": "Juvaaaa Kačer 🤗🤗"
+    "response": [
+      "Juvaaaa Kačer 🤗🤗",
+      "https://klipy.com/gifs/cute-duck-8",
+      "https://klipy.com/gifs/wuja-bronx"
+    ]
   },
   {
     "trigger_type": "S",
     "trigger": "enda",
     "response_type": "R",
-    "response": "Endííííík 🤗🤗"
+    "response": "Endííííík 🤗🤗",
+    "quantity": 3
   },
   {
     "trigger_type": "S",
     "trigger": "fuj",
     "response_type": "R",
-    "response": "Mňam! 😋😋"
+    "response": [
+      "Mňam! 😋😋",
+      "https://klipy.com/gifs/black-cat-cat-tongue"
+    ]
   },
   {
     "trigger_type": "S",
