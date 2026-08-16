@@ -400,11 +400,25 @@
   },
   {
     "trigger_type": "L",
+    "trigger": ["plakat", "brečet"],
+    "response_type": "R",
+    "response": "Pláč je sice léčivý 🤗 ale promokne mi kožíšek 🥹"
+  },
+  {
+    "trigger_type": "L",
     "trigger": ["nebýt mi xwcx dobře", "necítil jsem se xwcx dobře"],
     "response_type": "R",
     "response": [
       "🫂",
       "Každý člověk má jiný bod tání 🤗"
+    ]
+  },
+  {
+    "trigger_type": "S",
+    "trigger": "jsem unaven",
+    "response_type": "R",
+    "response": [
+      "Hajni si 🤗 a dej si 20... nebo 200 😴"
     ]
   },
   {
