@@ -18,7 +18,12 @@
     "trigger_type": "S",
     "trigger": "<@630065338423443478>",
     "response_type": "R",
-    "response": "Anooooooo...? <:meow:1224269231751827506>",
+    "response": [
+      "Anooooooo...? <:meow:1224269231751827506>",
+      "Jo?",
+      "Ne?",
+      "To jsem já <:meow:1224269231751827506>\nHelča <:meow:1224269231751827506>\npravá Helča\njá <:meow:1224269231751827506>"
+    ],
     "quantity": 1
   },
   {
