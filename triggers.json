@@ -15,18 +15,6 @@
     "quantity": 1
   },
   {
-    "trigger_type": "S",
-    "trigger": "<@630065338423443478>",
-    "response_type": "R",
-    "response": [
-      "Anooooooo...? <:meow:1224269231751827506>",
-      "Jo?",
-      "Ne?",
-      "To jsem já <:meow:1224269231751827506>\nHelča <:meow:1224269231751827506>\npravá Helča\njá <:meow:1224269231751827506>"
-    ],
-    "quantity": 1
-  },
-  {
     "trigger_type": "L",
     "trigger": ["ty nejsi xwcx Helča", "ty nejsi ta xwcx Helča"],
     "response_type": "R",
@@ -34,8 +22,8 @@
     "quantity": 1
   },
   {
-    "trigger_type": "L",
-    "trigger": "jít",
+    "trigger_type": "S",
+    "trigger": ["povídání", "jít"],
     "response_type": "R",
     "response": [
       "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_gregi_smol_2.gif",
@@ -60,8 +48,20 @@
     "quantity": 1
   },
   {
+    "trigger_type": "S",
+    "trigger": "<@630065338423443478>",
+    "response_type": "R",
+    "response": [
+      "Anooooooo...? <:meow:1224269231751827506>",
+      "Jo?",
+      "Ne?",
+      "To jsem já <:meow:1224269231751827506>\nHelča <:meow:1224269231751827506>\npravá Helča\njá <:meow:1224269231751827506>"
+    ],
+    "quantity": 1
+  },
+  {
     "trigger_type": "L",
-    "trigger": ["Helčo máš moje posvěcení", "Helčo máš mé posvěcení", "Máš moje posvěcení Helčo", "Máš mé posvěcení Helčo"],
+    "trigger": ["jasně Helčo", "Helčo máš moje posvěcení", "Helčo máš mé posvěcení", "Máš moje posvěcení Helčo", "Máš mé posvěcení Helčo"],
     "response_type": "R",
     "response": "Děkuji za tvoje posvícení.\nTedaaaa, jak se to řekne česky?\n\n**OBĚTOVÁNÍ!**"
   },
@@ -133,7 +133,8 @@
       "Hezký život začne tím, že se chopíš nápadu zjistit čím potěšit Adu, tu naší romantickou záhadu 💗",
       "🎶 Dám si dvoje housle pod bradu, Adúúú,\n🎶 v bíle plachtě chodím pozadu, Adúúú",
       "Adu, to je můj lék proti chladu, i hladu 👹\ntímto si ji pro sebe definitivně kradu\ni kdybych pro ni musela vytvořit celou zahradu\nnebo ohradu 😈 <:hatching_Adu:1343692254237425744>",
-      "Adu? Podle mého odhadu není většího pokladu 🤗🤗"
+      "Adu? Podle mého odhadu není většího pokladu 🤗🤗",
+      "Chceš radu jak vařit lektvar štěstí? Sežeň si hromadu Adu jako hlavní přísadu 🧚🏼‍♀️🧙🏼‍♀️🧞‍♀️"
     ]
   },
   {
