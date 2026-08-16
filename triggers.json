@@ -6,6 +6,13 @@
     "response": "Pomoc, mě tohle smrtelně zardousí vtipama"
   },
   {
+    "trigger_type": "L",
+    "trigger": "povídání",
+    "response_type": "R",
+    "response": "",
+    "quantity": 1
+  },
+  {
     "trigger_type": "S",
     "trigger": "<@630065338423443478>",
     "response_type": "R",
@@ -116,7 +123,12 @@
       "Mít na blízku Adu není nikdy na závadu 🥰",
       "Adu, to je synonymum pro zásadu!\nKomunisté by ji nesnášeli víc než Miladu\ni všechny kapitalisty západu!",
       "Obejmi násAdu <:meow:1224269231751827506> 🧹",
-      "Hezký život začne tím, že se chopíš nápadu zjistit čím potěšit Adu, tu naší romantickou záhadu 💗"
+      "Hezký život začne tím, že se chopíš nápadu zjistit čím potěšit Adu, tu naší romantickou záhadu 💗",
+      "🎶 Dám si dvoje housle pod bradu, Adúúú,\n🎶 v bíle plachtě chodím pozadu, Adúúú",
+      "Adu, to je můj lék proti chladu, i hladu 👹\ntímto si ji pro sebe kradu\ni kdybych pro ni musela vytvořit celou zahradu\nnebo ohradu 😈 <:hatching_Adu:1343692254237425744>",
+      "Adu? Podle mého odhadu není většího pokladu 🤗🤗",
+      ""
+      hromadu Přísadu překladu příkladu základu listopadu Nadutý/nadutec/nadutost raduji/raduje/raduj zradu
     ]
   },
   {
