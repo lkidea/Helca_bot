@@ -120,6 +120,16 @@
   },
   {
     "trigger_type": "WS",
+    "trigger": "kakadu",
+    "response_type": "R",
+    "response": [
+      "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_1786996267325%7E2.jpg",
+      "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_KakAdu.png",
+      "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_P%C5%99idat%20nadpis.png"
+    ]
+  },
+  {
+    "trigger_type": "WS",
     "trigger": "adu",
     "response_type": "M",
     "response": [
@@ -142,7 +152,10 @@
       "Adu, to je můj lék proti chladu, i hladu 👹\ntímto si ji pro sebe definitivně kradu\ni kdybych pro ni musela vytvořit celou zahradu\nnebo ohradu 😈 <:hatching_Adu:1343692254237425744>",
       "Adu? Podle mého odhadu není většího pokladu 🤗🤗",
       "Chceš radu jak vařit lektvar štěstí? Sežeň si hromadu Adu jako hlavní přísadu 🧚🏼‍♀️🧙🏼‍♀️🧞‍♀️",
-      "Míti tak tu výsadu vzít si Adu na poradu...\nJistě by se mi dostalo skvělého výkladu o 17. listopadu i příkladu německého poetického překladu...\nAle hlavně... velmi kvalifikovaného odhadu, zda příteli poskytuji návnadu na zradu 🙀, nebo si naopak nevšímám jeho důležitého osobnostního kladu! 🥰"
+      "Míti tak tu výsadu vzít si Adu na poradu...\nJistě by se mi dostalo skvělého výkladu o 17. listopadu i příkladu německého poetického překladu...\nAle hlavně... velmi kvalifikovaného odhadu, zda příteli poskytuji návnadu na zradu 🙀, nebo si naopak nevšímám jeho důležitého osobnostního kladu! 🥰",
+      "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_1786996267325%7E2.jpg",
+      "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_KakAdu.png",
+      "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_P%C5%99idat%20nadpis.png"
     ]
   },
   {
