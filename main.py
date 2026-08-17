@@ -290,7 +290,7 @@ async def on_message(message: discord.Message):
 
 
     # Step B: Check 'WS' (Boundary/Wrapped Substring) Triggers
-    for rule in WB_TRIGGERS:
+    for rule in WS_TRIGGERS:
         for t in rule["trigger"]:
             target_str = t.lower()
             
