@@ -2,6 +2,8 @@ SL spojuje do jednoho stringu, ale zachovává mezery
 L kontroluje slova jedno po druhém samostatně jako celky
 L i SL vynechává interpunkci a emoji, S ani jedno
 červeno-modrý to bere v L jako [červený],[modrý] v SL jako "červený modrý"
+WS je jako S, ale po krajích stringu nepřelíná do delšího slova, vyžaduje oddělení interpunkcí/mezerou nebo konec řádku
+
 
 R je reply, M je jen prostá message 
 
