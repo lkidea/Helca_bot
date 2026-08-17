@@ -3,7 +3,10 @@
     "trigger_type": "WS",
     "trigger": "lol",
     "response_type": "M",
-    "response": "Pomoc, mě tohle smrtelně zardousí vtipama"
+    "response": [
+      "Pomoc, mě tohle smrtelně zardousí vtipama",
+      "hahhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehhahahhhaaaaaahahah.... prchahshahahahhahah bahahahha hahhahahahhaha!! haaa"
+    ]
   },
   {
     "trigger_type": "L",
