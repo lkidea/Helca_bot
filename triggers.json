@@ -22,8 +22,8 @@
     "quantity": 1
   },
   {
-    "trigger_type": "S",
-    "trigger": ["povídání", "pojďte", "jít"],
+    "trigger_type": "L",
+    "trigger": ["jít"],
     "response_type": "R",
     "response": [
       "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_gregi_smol_2.gif",
@@ -90,7 +90,7 @@
     "response": ["sedm <:meow:1224269231751827506>", "9 😈"]
   },
   {
-    "trigger_type": "L",
+    "trigger_type": "S",
     "trigger": "<@792077426238160916>",
     "response_type": "M",
     "response": [
