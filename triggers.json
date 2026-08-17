@@ -16,13 +16,6 @@
   },
   {
     "trigger_type": "L",
-    "trigger": ["ty nejsi xwcx Helča", "ty nejsi ta xwcx Helča"],
-    "response_type": "R",
-    "response": "Všechna Helča je správná Helča 👅",
-    "quantity": 1
-  },
-  {
-    "trigger_type": "L",
     "trigger": ["jít"],
     "response_type": "R",
     "response": [
@@ -48,7 +41,7 @@
     "quantity": 1
   },
   {
-    "trigger_type": "S",
+    "trigger_type": "L",
     "trigger": "<@630065338423443478>",
     "response_type": "R",
     "response": [
@@ -61,12 +54,19 @@
   },
   {
     "trigger_type": "L",
+    "trigger": ["ty nejsi xwcx Helča", "ty nejsi ta xwcx Helča"],
+    "response_type": "R",
+    "response": "Všechna Helča je správná Helča 👅",
+    "quantity": 1
+  },
+  {
+    "trigger_type": "L",
     "trigger": ["jasně Helčo", "Helčo máš moje posvěcení", "Helčo máš mé posvěcení", "Máš moje posvěcení Helčo", "Máš mé posvěcení Helčo"],
     "response_type": "R",
     "response": "Děkuji za tvoje posvícení.\nTedaaaa, jak se to řekne česky?\n\n**OBĚTOVÁNÍ!**"
   },
   {
-    "trigger_type": "S",
+    "trigger_type": "WS",
     "trigger": "takové",
     "response_type": "M",
     "response": "takové takové takové"
@@ -84,7 +84,7 @@
     "response": "Já mám ráda vodu ze záchoda."
   },
   {
-    "trigger_type": "L",
+    "trigger_type": "WS",
     "trigger": "šest",
     "response_type": "R",
     "response": ["sedm <:meow:1224269231751827506>", "9 😈"]
@@ -100,7 +100,7 @@
     "quantity": 7
   },
   {
-    "trigger_type": "S",
+    "trigger_type": "WS",
     "trigger": "a o čem",
     "response_type": "R",
     "response": "O čemkoliv 🤗 Jestli tě třeba něco trápí, můžeš se zkusit o to podělit 🤗"
@@ -213,7 +213,7 @@
     ]
   },
   {
-    "trigger_type": "L",
+    "trigger_type": "S",
     "trigger": "sakra Tome",
     "response_type": "M",
     "response": "Tomáškův oranžový moment 🧡✨"
@@ -244,7 +244,7 @@
     "response": "Tomáš je faaajn, není blbý 😇"
   },
   {
-    "trigger_type": "S",
+    "trigger_type": "WS",
     "trigger": "To máš za to",
     "response_type": "R",
     "response": "Jistěže Tomáš 😺 a jistěže je zlato✨ 🤗"
@@ -317,7 +317,7 @@
     ]
   },
   {
-    "trigger_type": "S",
+    "trigger_type": "L",
     "trigger": "enda",
     "response_type": "R",
     "response": "Endííííík 🤗🤗",
