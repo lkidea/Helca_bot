@@ -38,6 +38,7 @@ for rule in TRIGGERS:
         
 # Split into S and L lists at startup to optimize execution speed
 S_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "S"]
+WS_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "WS"]
 L_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "L"]
 SL_TRIGGERS = [t for t in TRIGGERS if t.get("trigger_type") == "SL"]
 
@@ -285,12 +286,36 @@ async def on_message(message: discord.Message):
             elif target_str in content_lower:
                 await execute_response(message, rule)
                 return
+                
+
+
+    # Step B: Check 'WS' (Boundary/Wrapped Substring) Triggers
+    for rule in WB_TRIGGERS:
+        for t in rule["trigger"]:
+            target_str = t.lower()
+            
+            # Path 1: It contains a wildcard
+            if "xwcx" in target_str:
+                # We pass strict=True to activate the \b wrappers in your existing function
+                if check_wildcard_match(target_str, content_lower, strict=True):
+                    await execute_response(message, rule)
+                    return
+                    
+            # Path 2: Normal string, but we want strict word boundaries at the edges
+            else:
+                # \b ensures it doesn't bleed into other words (blocks "násadu")
+                # re.escape ensures special characters in the trigger don't break the regex
+                pattern = r"\b" + re.escape(target_str) + r"\b"
+                if re.search(pattern, content_lower):
+                    await execute_response(message, rule)
+                    return
+                    
 
 
 
 
 
-    # Step B: If no 'S' trigger hit, process 'L' and 'SL' Triggers
+    # Step C: If no 'S' trigger hit, process 'L' and 'SL' Triggers
     if L_TRIGGERS or SL_TRIGGERS:
         # 1. Tokenize and lemmatize using MorphoDiTa ONCE for both trigger types
         message_lemmas = get_lemmas_with_polarity(message.content)
@@ -325,7 +350,7 @@ async def on_message(message: discord.Message):
 
         
 
-        # --- NEW Step C: Process 'SL' (Substring Lemmatized) Triggers ---
+        # --- NEW Step D: Process 'SL' (Substring Lemmatized) Triggers ---
         if SL_TRIGGERS:
             # Re-join the lemmas into a single string to recreate the flexible substring behavior
             lemmatized_message_string = " ".join(message_lemmas)
