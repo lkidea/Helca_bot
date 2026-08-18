@@ -12,12 +12,12 @@
   },
   {
     "trigger_type": "L",
-    "trigger": ["kouzlo", "kouzelný", "kouzlit", "kouzelník"],
+    "trigger": ["kouzlo", "kouzelný", "kouzlit", "kouzelník", "čaroděj", "čarodějka"],
     "response_type": "R",
     "response": [
       "https://klipy.com/gifs/fat-wizard-cat-explode",
       "https://klipy.com/gifs/magic-cat-wizard-cat",
-      "https://klipy.com/gifs/cat-giving-spell-cat-casting-a-spell"
+      "https://klipy.com/gifs/merlin-william-papadin"
     ],
     "quantity": 1
   },
