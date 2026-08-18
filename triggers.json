@@ -108,6 +108,15 @@
   },
   {
     "trigger_type": "WS",
+    "trigger": "šest v řadě",
+    "response_type": "R",
+    "response": [
+      "A co 7 v řadě?",
+      "https://klipy.com/gifs/haha-gumichan"
+    ]
+  },
+  {
+    "trigger_type": "WS",
     "trigger": "šest",
     "response_type": "R",
     "response": ["sedm <:meow:1224269231751827506>", "**9** 😈"]
