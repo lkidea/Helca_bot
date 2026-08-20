@@ -442,7 +442,10 @@
     "trigger_type": "S",
     "trigger": "libor",
     "response_type": "R",
-    "response": "Libor ten má taaak nádherné vlásky, <@891364671746084904> můžu se jich imaginárně dotknout?",
+    "response": [
+      "Libor ten má taaak nádherné vlásky, <@891364671746084904> můžu se jich imaginárně dotknout?",
+      "Libore? Máš ještě blonďaté vlasy?"
+    ]
     "quantity": 2
   },
   {
