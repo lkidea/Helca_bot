@@ -12,6 +12,15 @@
   },
   {
     "trigger_type": "L",
+    "trigger": "Hanka",
+    "response_type": "R",
+    "response": [
+      "**G**do je Hanka, to je skvělá hádanka!\nNení to žádná horalka, je to naše skvělá hvězdička ✨🤗."
+    ],
+    "quantity": 1
+  },
+  {
+    "trigger_type": "L",
     "trigger": ["kouzlo", "kouzelný", "kouzlit", "kouzelník", "čaroděj", "čarodějka"],
     "response_type": "R",
     "response": [
@@ -92,7 +101,7 @@
     "trigger_type": "WS",
     "trigger": "takové",
     "response_type": "M",
-    "response": "takové takové takové"
+    "response": "*takové takové takové*"
   },
   {
     "trigger_type": "L",
@@ -127,7 +136,8 @@
     "response_type": "M",
     "response": [
       "-# ||(Petříček je cute 🥰)||",
-      "🎶  Petře Petříčku... ☺️ Chlapče rozmilý ☺️  🎶"
+      "🎶  Petře Petříčku... ☺️ Chlapče rozmilý ☺️  🎶",
+      "Černý Petr?⚫⠀⠀⠀Bílý Petr?⚪"
     ],
     "quantity": 7
   },
