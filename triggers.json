@@ -333,10 +333,14 @@
   },
   {
     "trigger_type": "S",
-    "trigger": "čerok miluje lojzu",
+    "trigger": [
+      "čerok miluje lojzu",
+      "lojza miluje Čeroka"
+    ],
     "response_type": "R",
     "response": [
       "https://tenor.com/view/gay-gif-25904425",
+      "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_Picsart_26-08-20_23-36-48-294.png",
       "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_haruka_and_akihiko_tickled_1_by_riug_djpm1j3-350t.jpg"
     ]
   },
