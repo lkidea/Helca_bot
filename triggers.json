@@ -388,7 +388,10 @@
     "trigger_type": "L",
     "trigger": "enda",
     "response_type": "R",
-    "response": "Endííííík 🤗🤗",
+    "response": [
+      "Endííííík 🤗🤗",
+      "Ty tvoje rudé baculaté tvářičky, hebké jako dětská prdelka, awhhh 🤗🥰🫠"
+    ],
     "quantity": 3
   },
   {
