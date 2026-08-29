@@ -31,7 +31,16 @@
       "Juuuuuu 💗 já ráda lásku 🤗🤗🤗🤗",
       "🥰",
       "Jaká je tvoje definice lásky?",
-      ""
+      "-# **Láska**\n-# Pod tímto slovem si vybavím pojmů mraky:\n-# *shovívavost,\n-# obětavost*\n-# Taky,\n-# *laskavost*\n-# Či\n-# *žárlivost.*\n\n-# Nikomu netřeba vysvětlovat,\n-# co láska znamená.\n-# Každý jí dobře zná\n-# A bude jí mnohdy potřebovat.\n\n-# I když dokáže bolet,\n-# Víc než zábor přes sto let,\n-# Dokáže i hojit,\n-# Ba i spojit\n-# Zmatená srdce.",
+      "-# Citt, citt, citt,\n-# Zpívá pěnkava obecná na jaře,\n-# Vypráví o prožitcích a vášni,\n-# Od prvního paprsku záře.\n\n-# Jako moje zesnulá kamarádka,\n-# Na naší bývalé procházce,\n-# Povídá o své první lásce,\n-# Jako by to byla pohádka.\n\n-# U toho pokuřuje cigárka,\n-# I přes mojí velkou starost o její život,\n-# Jí nalévali v noci často víno do pohárka.\n-# Vypila toho tolik, že změnila barvu a šel z ní pot.\n\n-# Pot, z ní šel i když se dusila v hořícím bytě,\n-# Možná se snažila utéct hbitě,\n-# Ale vzdala to,\n-# Dýchala zhluboka a stála,\n-# Když klika nereagovala.\n\n-# Dívka malá,\n-# Zlatovláska,\n-# Nebyla milována.\n-# Milovala jí její láska.\n-# Jenž jí život vlastní vzala.",
+      "-# Milovat druhé je těžké, ale mnohem těžší je milovat sebe. \n-# S chybami a nanicovatými lidskými rysy.\n-# Raději bych byla pomeranč, než člověk co posílá vlastní druh do nebe.",
+      "-# Je to čirá láska.\n-# Jsou to tři kameny,\n-# My dva na sebe hážeme stíny,\n-# A obloha je jasná.\n\n-# Položila jsem pátý kámen lineárně,\n-# Tvoje oči na mě pohlédly vulgárně,\n-# Já jsem se šibalsky usmála,\n-# A za prohru ti popřála 😜.",
+      "Láska, to je když se chce pizza🍕 tulit s ananasem🍍 a mít ho pořád nablízku 🤗🥰",
+      "Láska je jako hot dog🌭. Teplá🔥 a zoofilní🦒.",
+      "Láska je jako hromadná pitva. Jeden druhému krade srdce, ale zato oči mají jenom pro sebe.",
+      "Láska je jako chuť na chleba s šunkou a Nutellou v jednu ráno. Vždycky přijde, když jí nejméně čekáš a zachutná ti na celý život.",
+      "Láska je jako hra šachu, zlobíš se jenom, když ti dojde čas.",
+      "Láska je jako zmrzlinka s příchutí cementu. Někdy těžká, ale dobrá."
     ],
     "quantity": 1
   },
@@ -389,13 +398,15 @@
     "trigger_type": "S",
     "trigger": "česk",
     "response_type": "R",
-    "response": "Przepraszam? <:meow:1224269231751827506>"
+    "response": "Przepraszam? <:meow:1224269231751827506>",
+    "quantity": 2
   },
   {
     "trigger_type": "L",
     "trigger": "čeština",
     "response_type": "R",
-    "response": "Przepraszam?"
+    "response": "Przepraszam?",
+    "quantity": 2
   },
   {
     "trigger_type": "L",
