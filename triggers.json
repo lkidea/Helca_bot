@@ -11,17 +11,6 @@
     ]
   },
   {
-    "trigger_type": "WS",
-    "trigger": "lol",
-    "response_type": "R",
-    "response": [
-      "Pomoc, mě tohle smrtelně zardousí vtipama!",
-      "*hahhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehhahahhhaaaaaahahah.... prchahshahahahhahah bahahahha hahhahahahhaha!! haaa*",
-      "🤣",
-      "Ty jsi taková naše lolita <:meow:1224269231751827506> 💄"
-    ]
-  },
-  {
     "trigger_type": "L",
     "trigger": ["čaj", "čajový"],
     "response_type": "R",
@@ -30,6 +19,15 @@
       "👘 🫖",
       "Čajíček je super 🥰🤗 na teplotu, na bříško i na nervy 🤗",
       "## ```Čaj je jako život, všichni víme jak ho vařit, ale nikdo neví jako ho dělat správně.```\n-# -Helena Gašová\n\nJe to věda. Piggi o tom po chemické stránce dokonce psal minulým rokem na Fishpárty na notebooku do školy. Taky mi jednou vysvětloval Filip Godlewski, jak se správně vaří čaj, když jsme byli v Polsku (samozřejmě jsem většinu z toho zapomněla, bohužel takto funguje paměť).\n\nNež začneme vařit čaj,  výběrem kvalitního čaje.\nMáme spoustu druhů čaje podle potřeby, nálady, nebo chuti:\n- **Černý čaj**\n> *Čistý nebo ovoněný*\n- **Zelený čaj**\n> *Čistý nebo ovoněný*\n- **Bílý čaj**\n- **Žlutý čaj**\n-  **Oolong**\n> *Je to čaj, který je chuťově mezi zeleným a černým čajem*\n- **Pu Erh**\n> *Speciální čaj původem z provincie Yunnan*\n- **Ovocný čaj**\n- **Bylinkové čaje**\n\nTady je pár doporučených e-shopů pro výběr toho správného ||(není to černý trh)||:\n[cajovebedynky.cz](<https://www.cajovebedynky.cz/>)\n[manutea.cz](<https://www.manutea.cz/>)\n\nKdyž jsi koupíš čaj skladuj ho na nezávadném místě daleko od aromatických vůní, chraň před vlhkostí, vysokou teplotou a vzduchem z troposféry.\n\nDej do vhodné nádoby čaj a připrav ho podle manuálu. (Pokud máš sypaný čaj, pro lepší prožitek ho propláchni vodou.)\n\nPoužívej měkkou vodu. Pro nejlepší čajový prožitek použij filtrovanou vodu z kohoutku, nebo vodu balenou neperlivou a dej jí vařit.\n\nVlej do nádoby s čajem tak teplou vodu, jak moc chceš mít silný čaj. Čím teplejší tím silnější.\n\n# DONE\n## Bon appetit!"
+    ],
+    "quantity": 1
+  },
+  {
+    "trigger_type": "L",
+    "trigger": "láska",
+    "response_type": "R",
+    "response": [
+      "Láska je jako hot dog🌭. Teplá🔥 a zoofilní🦒."
     ],
     "quantity": 1
   },
