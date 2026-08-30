@@ -11,6 +11,17 @@
     ]
   },
   {
+    "trigger_type": "WS",
+    "trigger": "lol",
+    "response_type": "R",
+    "response": [
+      "Pomoc, mě tohle smrtelně zardousí vtipama!",
+      "*hahhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehehehhhhhhahahhahehehhhhhhhhehrhhahahahhahahehhahahhhaaaaaahahah.... prchahshahahahhahah bahahahha hahhahahahhaha!! haaa*",
+      "🤣",
+      "Ty jsi taková naše lolita <:meow:1224269231751827506> 💄"
+    ]
+  },
+  {
     "trigger_type": "L",
     "trigger": ["čaj", "čajový"],
     "response_type": "R",
