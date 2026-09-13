@@ -50,10 +50,10 @@
     "response_type": "R",
     "response": [
       "**G**do je Hanka, to je skvělá hádanka!\nNení to žádná horalka, je to naše skvělá hvězdička ✨🤗.",
-      "# Naše Hanko.  <:Hanka_tell_me_more:1502108275666325624>\nMáš vlasy hnědé jako čokoláda.",
-      "# Naše Tatranko!  <:Hanka_tell_me_more:1502108275666325624>\nVlastníš oči barvy čerstvě sesbírané obiloviny.",
-      "# Naše pohanko!  <:Hanka_tell_me_more:1502108275666325624>\nMožná máš cévní tekutinu Červenou,\nČi Modrou\nAle určitě máš více Kofoly ve krvi než červených krvinek obíhající hlavou.",
-      "# Naše Krnovanko!"
+      "## Naše Hanko.  <:Hanka_tell_me_more:1502108275666325624>\nMáš vlasy hnědé jako čokoláda.",
+      "## Naše Tatranko!  <:Hanka_tell_me_more:1502108275666325624>\nVlastníš oči barvy čerstvě sesbírané obiloviny.",
+      "## Naše pohanko!  <:Hanka_tell_me_more:1502108275666325624>\nMožná máš cévní tekutinu Červenou,\nČi Modrou\nAle určitě máš více Kofoly ve krvi než červených krvinek obíhající hlavou.",
+      "## Naše Krnovanko!"
     ],
     "quantity": 3
   },
@@ -491,7 +491,12 @@
     "response_type": "R",
     "response": [
       "Libor ten má taaak nádherné vlásky, <@891364671746084904> můžu se jich imaginárně dotknout?",
-      "Libore? Máš ještě blonďaté vlasy?"
+      "Libore? Máš ještě blonďaté vlasy?",
+      "Libko?",
+      "Libmilo?",
+      "Hynku?",
+      "Viléme?",
+      "Jarmilo?"
     ],
     "quantity": 2
   },
