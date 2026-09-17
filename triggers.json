@@ -12,14 +12,10 @@
   },
   {
     "trigger_type": "L",
-    "trigger": ["", ""],
-    "response_type": "",
-    "response": [
-      "",
-      "",
-      ""
-    ],
-    "quantity": 
+    "trigger": "větrník",
+    "response_type": "R",
+    "response": "Mmmm😋... The windmill is so tasty 😋😋😋😋😋😋",
+    "quantity": 1
   },
   {
     "trigger_type": "L",
