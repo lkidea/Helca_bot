@@ -12,7 +12,7 @@ R je reply, M je jen prostá message
 
 
 xwcx je wildcard za 1 nebo 0 slov... lze jich v jednom triggeru použít víc
-funguje u všech typů, u L i s tím porovnáváním po jednom slovu, ale ještě jsem to důkladně nezkoušel, zda nejsou bugy
+funguje u všech typů, u L i s tím porovnáváním po jednom slovu (porovnání každého slova zvlášť jednoho po druhém), ale ještě jsem to důkladně nezkoušel, zda nejsou bugy
 {
     "trigger_type": "SL",
     "trigger": "nenechávejte ho xwcx",
