@@ -11,6 +11,13 @@
     ]
   },
   {
+    "trigger_type": "WS",
+    "trigger": ["jdu jíst", "mám xwcx jídlo", "mám xwcx xwcx jídlo", "těším se na jídlo", "se těším na jídlo", "jdu na večeři", "jdu na oběd", "jdu na snídani", "mnam", "mňam", "ham"],
+    "response_type": "R",
+    "response": "<:Bone:1047218066351726663> appétit!",
+    "quantity": 1
+  },
+  {
     "trigger_type": "L",
     "trigger": "větrník",
     "response_type": "R",
