@@ -330,9 +330,18 @@
   },
   {
     "trigger_type": "S",
-    "trigger": "sakra Tome",
+    "trigger": [
+      "sakra Tome",
+      "notak Tome",
+      "kurnik Tome",
+      "kruci Tome",
+      "krucinál Tome"
+    ],
     "response_type": "M",
-    "response": "Tomáškův oranžový moment 🧡✨"
+    "response": [
+      "Tomáškův oranžový moment 🧡✨",
+      "...Tomová bomba... 🍄‍🟫"
+    ]
   },
   {
     "trigger_type": "L",
