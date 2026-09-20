@@ -134,7 +134,7 @@
       "<:what_have_I_done_Anakinn:1342949855739510855>",
       "To jsem já <:meow:1224269231751827506>\nHelča <:meow:1224269231751827506>\npravá Helča\njá <:meow:1224269231751827506>"
     ],
-    "quantity": 1
+    "quantity": 2
   },
   {
     "trigger_type": "L",
@@ -153,7 +153,8 @@
     "trigger_type": "WS",
     "trigger": "takové",
     "response_type": "M",
-    "response": "*takové takové takové*"
+    "response": "*takové takové takové*",
+    "quantity": 4
   },
   {
     "trigger_type": "L",
@@ -521,7 +522,7 @@
       "Viléme?",
       "Jarmilo?"
     ],
-    "quantity": 2
+    "quantity": 4
   },
   {
     "trigger_type": "S",
@@ -530,8 +531,10 @@
     "response": [
       "🥺😻😻 Lojzíček má cute očíčka! 🤗🥺🥺🥺🥺",
       "Vždyť Lojza je Alois pozpátku...",
+      "Loyza?",
       "https://raw.githubusercontent.com/lkidea/Helca_bot/refs/heads/main/x_lojza-foto.jpg"
-    ]
+    ],
+    "quantity": 2
   },
   {
     "trigger_type": "L",
