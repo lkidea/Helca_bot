@@ -292,7 +292,7 @@
   {
     "trigger_type": "S",
     "trigger": "by jsme",
-    "response_type": "M",
+    "response_type": "R",
     "response": "https://tenor.com/view/grammar-police-drift-police-car-gif-17312786"
   },
   {
