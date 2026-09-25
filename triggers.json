@@ -360,7 +360,10 @@
     "trigger_type": "L",
     "trigger": "Tomáš",
     "response_type": "M",
-    "response": "https://klipy.com/gifs/thomas-friends-thomas-the-train",
+    "response": [
+      "https://klipy.com/gifs/thomas-friends-thomas-the-train",
+      "https://tenor.com/bwLwdR2bKU9.gif"
+    ],
     "quantity": 3
   },
   {
@@ -456,7 +459,7 @@
       "Endííííík 🤗🤗",
       "Ty tvoje rudé baculaté tvářičky, hebké jako dětská prdelka, awhhh 🤗🥰🫠"
     ],
-    "quantity": 3
+    "quantity": 5
   },
   {
     "trigger_type": "S",
@@ -640,7 +643,8 @@
     "trigger_type": "S",
     "trigger": "špatn",
     "response_type": "M",
-    "response": "<@891364671746084904> máme tady jeden takový ošklivý, nepěknou věc <:sumisplouchalik:1184223248829923400>"
+    "response": "<@891364671746084904> máme tady jeden takový ošklivý, nepěknou věc <:sumisplouchalik:1184223248829923400>",
+    "quantity": 4
   },
   {
     "trigger_type": "S",
