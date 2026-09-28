@@ -628,6 +628,18 @@
   },
   {
     "trigger_type": "L",
+    "trigger": [
+      "okatě",
+      "okatý"
+    ],
+    "response_type": "R",
+    "response": [
+      "Jeee je to je okaté jako okoun🐟, nebo\njako tvoje podvádění v piškvorkách."
+    ],
+    "quantity": 1
+  },
+  {
+    "trigger_type": "L",
     "trigger": ["oči", "očíčka", "očička", "oko"],
     "response_type": "R",
     "response": [
