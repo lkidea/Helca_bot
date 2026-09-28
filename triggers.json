@@ -617,6 +617,13 @@
     "response": "anooooo, prosím 🍜🍜🍜🍜"
   },
   {
+    "trigger_type": "WS",
+    "trigger": "ok",
+    "response_type": "R",
+    "response": "",
+    "quantity": 1
+  },
+  {
     "trigger_type": "L",
     "trigger": ["oči", "očíčka", "očička"],
     "response_type": "R",
