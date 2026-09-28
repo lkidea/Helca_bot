@@ -620,12 +620,16 @@
     "trigger_type": "WS",
     "trigger": "ok",
     "response_type": "R",
-    "response": "",
+    "response": [
+      "-# 👁️👅👁️",
+      "-# 👀",
+      "-# 👁️"
+    ],
     "quantity": 1
   },
   {
     "trigger_type": "L",
-    "trigger": ["oči", "očíčka", "očička"],
+    "trigger": ["oči", "očíčka", "očička", "oko"],
     "response_type": "R",
     "response": [
       "🥺 Očíčka jsou okna do duše. 🤗  A když máš někoho rád ❤️❤️,  tak to vidíš i v očích 🤗🤗\n❛⁠ ⁠ᴗ⁠ ⁠❛",
